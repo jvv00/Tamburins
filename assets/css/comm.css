@@ -1,4 +1,182 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+fieldset,
+img {
+  border: 0 none;
+}
+
+dl,
+ul,
+ol,
+menu,
+li {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+input,
+select,
+textarea {
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+button {
+  font-size: 100%;
+  vertical-align: middle;
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+}
+
+.blind,
+caption,
+legend {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
 body {
   background: url(../../images/main/main1_cc.png) no-repeat 0 0;
-  background-image: 0.7;
-} /*# sourceMappingURL=comm.css.map */
+  opacity: 0.7;
+}
+
+.wrap {
+  margin: auto;
+  justify-content: center;
+  height: 200vh;
+}
+
+#header {
+  display: flex;
+  position: relative;
+  z-index: 1000;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+}
+#header .inner {
+  display: flex;
+  position: absolute;
+  align-items: space-around;
+  height: 50px;
+  padding: 16px;
+}
+#header .inner .header_right {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50px;
+}
+
+#logo {
+  position: absolute;
+  z-index: 1100;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 16px;
+  padding: 16px;
+}
+
+#gnb-wrap .label-burger {
+  position: absolute;
+  z-index: 1100;
+  display: flex;
+  height: 50px;
+}
+#gnb-wrap .label-burger .bar {
+  display: block;
+  width: 16px;
+  height: 1px;
+  background: #111;
+}
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 690px;
+}
+
+#main {
+  width: 100%;
+}
+#main .bestpd {
+  display: flex;
+  position: absolute;
+  top: 690px;
+  left: 0;
+  background: #f8f5f0;
+  width: 100%;
+  height: 390px;
+}
+#main .bestpd .bestpd-list {
+  display: flex;
+  position: absolute;
+}
+#main .bestpd li {
+  width: 200px;
+  height: 225px;
+}
+#main .bestpd img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=comm.css.map */
