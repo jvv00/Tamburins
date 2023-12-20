@@ -1,6 +1,10 @@
 js;
-new Swiper(".swiper-container", {
-  direction: "vertical", // 수직 슬라이드
-  autoplay: true, // 자동 재생 여부
-  loop: true, // 반복 재생 여부
+new Swiper(".slide-bestpd", {
+  slidesPerView: "2",
+  centeredSlides: true,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 });

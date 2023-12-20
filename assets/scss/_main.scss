@@ -1,0 +1,29 @@
+.slide-intro {
+  position: relative;
+  swiper-slide {
+    height: 690px;
+  }
+}
+.bestpd {
+  height: 390px;
+  background: $primary;
+}
+.slide-bestpd {
+  display: flex;
+  .swiper-slide {
+    @include flex;
+  }
+  img {
+    display: block;
+    object-fit: cover;
+    width: 156px;
+  }
+  .bestpd-list {
+    display: flex;
+  }
+}
+
+.newpd {
+  height: 726px;
+  background: $white;
+}
