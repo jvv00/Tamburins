@@ -112,21 +112,21 @@
           </h1>
           <div class="col_right">
             <!-- gnb -->
-            <div class="gnb-wrap">
+            <nav class="gnb-wrap">
               <input
                 type="checkbox"
                 name="gnbNav"
                 id="gnbNav"
                 class="input-burger"
               />
-              <label for="gnbNav">
+              <label for="gnbNav" class="label-burger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
                 <span class="blind">전체 메뉴 보기</span>
               </label>
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <nav id="gnb"></nav>
-            </div>
+              <div id="gnb">전체 메뉴</div>
+            </nav>
             <!-- util -->
             <div class="util"></div>
           </div>
@@ -134,56 +134,23 @@
       </header>
 
       <main id="main">
-        <swiper-container
-          class="slide-intro"
-          pagination="true"
-          0
-          autoplay="true"
-          pagination-clickable="true"
-          navigation="true"
-          space-between="30"
-          loop="true"
-        >
-          <span class="blind">slide</span>
-          <swiper-slide
-            ><a href="#"> <img src="./images/main/slide1.png" alt="" /></a
-          ></swiper-slide>
-          <swiper-slide
-            ><a><img src="./images/main/slide1.png" alt="" /></a
-          ></swiper-slide>
-          <swiper-slide>Slide 3</swiper-slide>
-          <swiper-slide>Slide 4</swiper-slide>
-          <swiper-slide>Slide 5</swiper-slide>
-          <swiper-slide>Slide 6</swiper-slide>
-          <swiper-slide>Slide 7</swiper-slide>
-          <swiper-slide>Slide 8</swiper-slide>
-          <swiper-slide>Slide 9</swiper-slide>
-
-          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-        </swiper-container>
-
-        <!-- <a href="#">
-          <img src="./images/main/slide1.png" alt="" />
-        </a> -->
-
-        <section class="bestpd">
+        <section class="slide">
           <swiper-container
-            class="slide-bestpd"
+            class="slide-intro"
+            pagination="true"
+            0
+            autoplay="true"
+            pagination-clickable="true"
+            navigation="true"
             space-between="30"
-            slides-per-view="2"
+            loop="true"
           >
-            <span class="blind">best product</span>
+            <span class="blind">slide</span>
+            <div class="swiper-slide">
+              <a href="#"> <img src="./images/main/slide1.png" alt="" /></a>
+            </div>
             <swiper-slide
-              ><a href="#">
-                <img
-                  src="./images/main/tamburins_chamo_purfume.png"
-                  alt="" /></a
-            ></swiper-slide>
-            <swiper-slide
-              ><a
-                ><img
-                  src="./images/main/tamburins_toilet_fragnance.png"
-                  alt="" /></a
+              ><a><img src="./images/main/slide1.png" alt="" /></a
             ></swiper-slide>
             <swiper-slide>Slide 3</swiper-slide>
             <swiper-slide>Slide 4</swiper-slide>
@@ -193,9 +160,40 @@
             <swiper-slide>Slide 8</swiper-slide>
             <swiper-slide>Slide 9</swiper-slide>
 
-            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
           </swiper-container>
         </section>
+        <div class="bestpd">
+          <h2>BEST PRODUCT</h2>
+          <div class="swiper slide-bestpd">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="bestpd-wrap">
+                  <a href="#">
+                    <img
+                      src="./images/main/tamburins_chamo_purfume.png"
+                      alt="#"
+                    />
+                  </a>
+                  <div class="bestpd-dt">
+                    <span>퍼퓸 카모</span>
+                    <p>진득한 카모마일</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+              <div class="swiper-slide">Slide 4</div>
+              <div class="swiper-slide">Slide 5</div>
+              <div class="swiper-slide">Slide 6</div>
+              <div class="swiper-slide">Slide 7</div>
+              <div class="swiper-slide">Slide 8</div>
+              <div class="swiper-slide">Slide 9</div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
         <section class="newpd">
           <div class="newpd-img">
             <a href="#"

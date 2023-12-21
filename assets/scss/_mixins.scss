@@ -15,6 +15,12 @@
   border: 1px soilid $border-color;
   background-color: $bg-color;
 }
+// @mixin posF {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+
+// }
 
 @mixin posX {
   position: absolute;

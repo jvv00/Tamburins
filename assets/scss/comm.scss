@@ -1,8 +1,18 @@
 @import "variables", "mixins", "fonts", "reset";
-
 body {
+  position: relative;
+  height: 100%;
+  opacity: 0.8;
+}
+body::before {
+  content: "";
   background: url(../../images/main/main1_cc.png) no-repeat 0 0;
-  opacity: 0.7;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .wrap {
   display: flex;
@@ -20,16 +30,83 @@ body {
 .inner {
   position: relative;
   width: 100%;
+}
+#logo {
+  @include flex;
 
-  #logo {
-    @include flex;
-    margin: 16px;
+  a {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 1200;
+    padding: 16px 0;
   }
-  .col_right {
+}
+.col_right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: $hdH;
+  z-index: 1100;
+}
+.gnb-wrap {
+  @include flex;
+  height: $hdH;
+  margin: 0 16px;
+  .input-burger {
     position: absolute;
     top: 0;
     right: 0;
+    width: 0;
+    height: 0;
+    &:checked {
+      & + .label-burger {
+        .bar:first-child {
+          transform: rotate(45deg) translate(4.5px, 3px);
+        }
+        .bar:nth-child(2) {
+          display: none;
+        }
+
+        .bar:nth-child(3) {
+          transform: rotate(-45deg) translate(1px, 0px);
+        }
+      }
+      & ~ #gnb {
+        left: 0;
+      }
+    }
   }
 }
+.label-burger {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1200;
+  gap: 4px;
 
+  .bar {
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    background: $black;
+    transition: all 0.3s;
+  }
+}
+#gnb {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 120px;
+  width: 100%;
+  background: $white;
+  z-index: 1100;
+}
 @import "main";
