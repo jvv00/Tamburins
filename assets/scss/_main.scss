@@ -1,29 +1,32 @@
-.slide-intro {
+.slide {
   position: relative;
-  swiper-slide {
+
+  .swiper-slide {
     height: 690px;
   }
 }
-.bestpd {
-  display: flex;
-  flex-direction: column;
-  height: 390px;
-  background: $primary;
-}
+
 .slide-bestpd {
   @include flex;
+  height: 390px;
+  background: $primary;
   flex-wrap: wrap;
+  align-content: center;
+  .swiper-wrapper {
+    align-items: center;
+  }
   .swiper-slide {
-    width: 200px;
     @include flex;
+    width: 200px;
+    height: 225px;
   }
   a {
-    display: block;
+    // display: block;
     width: 156px;
     height: 156px;
   }
   img {
-    display: block;
+    // display: block;
     object-fit: contain;
     width: 100%;
     height: 100%;
@@ -38,8 +41,73 @@
   text-align: center;
   width: 200px;
   height: 225px;
+  // & :hover {
+  //   img {
+  //     transform: scale(120%);
+  //   }
+  }
+
+  .bestpd-dt {
+    .bestpd-name {
+      margin: 10px 10px;
+    }
+    .bestpd-info {
+      display: flex;
+      font-size: 11px;
+      color: $txtInfo;
+    }
+    .bestpd-info :nth-child(1)::after {
+      content: "";
+      padding-right: 5px;
+      border-right: 1px solid #d9d9d9;
+      margin-right: 5px;
+      height: 8px;
+    }
+    .bestpd-info :nth-child(2)::after {
+      content: "";
+      padding-right: 5px;
+      border-right: 1px solid #d9d9d9;
+      margin-right: 5px;
+      height: 8px;
+    }
+  }
 }
+
 .newpd {
+  @include flex;
+  flex-direction: column;
   height: 726px;
+  font-family: "Memento";
+  font-size: 20px;
   background: $white;
+  .newpd-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+  }
+}
+
+.swiper-slide {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.auto-scroll-wrap {
+  margin-top: 50px;
+  .splide {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .splide__track {
+    overflow: visible;
+  }
+  .splide__slide img {
+    width: 100%;
+    height: auto;
+  }
 }

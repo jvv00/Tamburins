@@ -18,18 +18,24 @@ body::before {
   display: flex;
   flex-direction: column;
   min-height: 200vh;
+  max-width: 420px;
+  margin: 0 auto;
 }
-
+@media screen and (min-width: 1280px) {
+  .wrap {
+    max-width: none;
+  }
+}
 #header {
   position: fixed;
   width: 100%;
   height: $hdH;
-  z-index: 1100;
+  z-index: 1200;
 }
 
 .inner {
   position: relative;
-  width: 100%;
+  // max-width: 430px;
 }
 #logo {
   @include flex;
@@ -47,7 +53,7 @@ body::before {
   top: 0;
   right: 0;
   height: $hdH;
-  z-index: 1100;
+  // z-index: 1100;
 }
 .gnb-wrap {
   @include flex;

@@ -45,11 +45,17 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@NaN,0,0,0"
     />
+
+    <link rel="stylesheet" href="./assets/css/comm.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="./assets/css/comm.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script defer src="./assets/js/comm.js"></script>
   </head>
@@ -134,73 +140,240 @@
       </header>
 
       <main id="main">
-        <section class="slide">
-          <swiper-container
-            class="slide-intro"
-            pagination="true"
-            0
-            autoplay="true"
-            pagination-clickable="true"
-            navigation="true"
-            space-between="30"
-            loop="true"
-          >
-            <span class="blind">slide</span>
+        <div class="swiper slide">
+          <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <a href="#"> <img src="./images/main/slide1.png" alt="" /></a>
+              <a href="#"
+                ><img src="./images/main/slide1.png" alt="slide1"
+              /></a>
             </div>
-            <swiper-slide
-              ><a><img src="./images/main/slide1.png" alt="" /></a
-            ></swiper-slide>
-            <swiper-slide>Slide 3</swiper-slide>
-            <swiper-slide>Slide 4</swiper-slide>
-            <swiper-slide>Slide 5</swiper-slide>
-            <swiper-slide>Slide 6</swiper-slide>
-            <swiper-slide>Slide 7</swiper-slide>
-            <swiper-slide>Slide 8</swiper-slide>
-            <swiper-slide>Slide 9</swiper-slide>
-
-            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-          </swiper-container>
-        </section>
-        <div class="bestpd">
-          <h2>BEST PRODUCT</h2>
-          <div class="swiper slide-bestpd">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="bestpd-wrap">
-                  <a href="#">
-                    <img
-                      src="./images/main/tamburins_chamo_purfume.png"
-                      alt="#"
-                    />
-                  </a>
-                  <div class="bestpd-dt">
-                    <span>퍼퓸 카모</span>
-                    <p>진득한 카모마일</p>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">Slide 2</div>
-              <div class="swiper-slide">Slide 3</div>
-              <div class="swiper-slide">Slide 4</div>
-              <div class="swiper-slide">Slide 5</div>
-              <div class="swiper-slide">Slide 6</div>
-              <div class="swiper-slide">Slide 7</div>
-              <div class="swiper-slide">Slide 8</div>
-              <div class="swiper-slide">Slide 9</div>
+            <div class="swiper-slide">
+              <a href="#"
+                ><img src="./images/main/slide1.png" alt="slide1"
+              /></a>
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-slide">
+              <a href="#"
+                ><img src="./images/main/slide1.png" alt="slide1"
+              /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"
+                ><img src="./images/main/slide1.png" alt="slide1"
+              /></a>
+            </div>
           </div>
+          <div class="swiper-pagination"></div>
         </div>
 
-        <section class="newpd">
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+
+        <div class="swiper slide-bestpd">
+          BEST PRODUCT
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="bestpd-wrap">
+                <a href="#">
+                  <img
+                    src="./images/main/tamburins_chamo_purfume.png"
+                    alt="#"
+                  />
+                </a>
+                <div class="bestpd-dt">
+                  <div class="bestpd-name">퍼퓸 카모</div>
+                  <ul class="bestpd-info">
+                    <li>진득한 카모마일</li>
+                    <li>부드러운 나무결</li>
+                    <li>머스크</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="bestpd-wrap">
+                <a href="#">
+                  <img
+                    src="./images/main/tamburins_toilet_fragnance.png"
+                    alt="#"
+                  />
+                </a>
+                <div class="bestpd-dt">
+                  <div class="bestpd-name">토일렛 프래그넌스 세이지마리</div>
+                  <ul class="bestpd-info">
+                    <li>클라리세이지</li>
+                    <li>로즈마리</li>
+                    <li>만다린</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="bestpd-wrap">
+                <a href="#">
+                  <img
+                    src="./images/main/tamburins_chamo_purfumehand.png"
+                    alt="#"
+                  />
+                </a>
+                <div class="bestpd-dt">
+                  <div class="bestpd-name">퍼퓸 쉘 엑스 카모</div>
+                  <ul class="bestpd-info">
+                    <li>진득한 카모마일</li>
+                    <li>부드러운 나무결</li>
+                    <li>머스크</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="bestpd-wrap">
+                <a href="#">
+                  <img
+                    src="./images/main/tamburins_chamo_handwash.png"
+                    alt="#"
+                  />
+                </a>
+                <div class="bestpd-dt">
+                  <div class="bestpd-name">핸드워시 카모</div>
+                  <ul class="bestpd-info">
+                    <li>진득한 카모마일</li>
+                    <li>부드러운 나무결</li>
+                    <li>머스크</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <div class="newpd">
+          NEW PRODUCT
           <div class="newpd-img">
             <a href="#"
               ><img src="./images/main/tamburins_eggpurfume_1.png" alt=""
             /></a>
+            <div>The Egg Purfume</div>
           </div>
-        </section>
+
+          <!-- auto scroll -->
+          <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+
+          <div class="auto-scroll-wrap">
+            <div
+              id="splide-autoscroll"
+              class="splide"
+              aria-label="Beautiful Images"
+            >
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <img src="images/main/tamburins_egg_purfume7.png" alt="" />
+                  </li>
+                  <li class="splide__slide">
+                    <img
+                      src="./images/main/tamburins_egg_purfume8.png"
+                      alt=""
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="images/main/tamburins_egg_purfume7.png" alt="" />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="images/main/tamburins_egg_purfume9.png" alt="" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper slide-gift">
+          FOR GIFT
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="gift-wrap">
+                <a href="#">
+                  <img
+                    src="./images/main/tamburins_chamo_purfume.png"
+                    alt="#"
+                  />
+                </a>
+                <div class="gift-dt">
+                  <div class="gift-name">퍼퓸 카모</div>
+                  <ul class="gift-info">
+                    <li>진득한 카모마일</li>
+                    <li>부드러운 나무결</li>
+                    <li>머스크</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="bestpd-wrap">
+                <a href="#">
+                  <img
+                    src="./images/main/tamburins_toilet_fragnance.png"
+                    alt="#"
+                  />
+                </a>
+                <div class="bestpd-dt">
+                  <div class="bestpd-name">토일렛 프래그넌스 세이지마리</div>
+                  <ul class="bestpd-info">
+                    <li>클라리세이지</li>
+                    <li>로즈마리</li>
+                    <li>만다린</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="bestpd-wrap">
+                <a href="#">
+                  <img
+                    src="./images/main/tamburins_chamo_purfumehand.png"
+                    alt="#"
+                  />
+                </a>
+                <div class="bestpd-dt">
+                  <div class="bestpd-name">퍼퓸 쉘 엑스 카모</div>
+                  <ul class="bestpd-info">
+                    <li>진득한 카모마일</li>
+                    <li>부드러운 나무결</li>
+                    <li>머스크</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="bestpd-wrap">
+                <a href="#">
+                  <img
+                    src="./images/main/tamburins_chamo_handwash.png"
+                    alt="#"
+                  />
+                </a>
+                <div class="bestpd-dt">
+                  <div class="bestpd-name">핸드워시 카모</div>
+                  <ul class="bestpd-info">
+                    <li>진득한 카모마일</li>
+                    <li>부드러운 나무결</li>
+                    <li>머스크</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
       </main>
       <footer id="footer"></footer>
     </div>
