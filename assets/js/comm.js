@@ -9,7 +9,7 @@ var swiper1 = new Swiper(".slide", {
 });
 
 var swiper2 = new Swiper(".slide-bestpd", {
-  slidesPerView: auto,
+  slidesPerView: 1.8,
   spaceBetween: 30,
   pagination: {
     el: ".swiper-pagination",
@@ -31,11 +31,26 @@ document.addEventListener("DOMContentLoaded", function () {
   splide.mount(window.splide.Extensions);
 });
 
-var swiper2 = new Swiper(".slide-gift", {
-  slidesPerView: auto,
+var swiper3 = new Swiper(".slide-gift", {
+  slidesPerView: 2,
   spaceBetween: 30,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+  },
+});
+
+var swiper4 = new Swiper(".slide-store", {
+  grabCursor: true,
+  effect: "creative",
+  creativeEffect: {
+    prev: {
+      shadow: true,
+      translate: ["-120%", 0, -500],
+    },
+    next: {
+      shadow: true,
+      translate: ["120%", 0, -500],
+    },
   },
 });

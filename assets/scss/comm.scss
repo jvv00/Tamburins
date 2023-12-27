@@ -1,24 +1,24 @@
 @import "variables", "mixins", "fonts", "reset";
 body {
   position: relative;
-  height: 100%;
-  opacity: 0.8;
+  // opacity: 0.8;
 }
 body::before {
   content: "";
-  background: url(../../images/main/main1_cc.png) no-repeat 0 0;
-  opacity: 0.5;
+  background: url(../../images/comm/main1_cc.png) no-repeat 0 0;
+  opacity: 0.1;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  height: 200%;
 }
 .wrap {
   display: flex;
   flex-direction: column;
-  min-height: 200vh;
-  max-width: 420px;
+  max-width: 430px;
+
   margin: 0 auto;
 }
 @media screen and (min-width: 1280px) {
@@ -28,14 +28,14 @@ body::before {
 }
 #header {
   position: fixed;
-  width: 100%;
+  width: 100vh;
   height: $hdH;
   z-index: 1200;
 }
 
 .inner {
   position: relative;
-  // max-width: 430px;
+  width: 430px;
 }
 #logo {
   @include flex;
