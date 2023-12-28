@@ -1,25 +1,26 @@
 @import "variables", "mixins", "fonts", "reset";
 body {
   position: relative;
+  height: 100%;
   // opacity: 0.8;
 }
-body::before {
-  content: "";
-  background: url(../../images/comm/main1_cc.png) no-repeat 0 0;
-  opacity: 0.1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 200%;
-}
+// body::before {
+//   content: "";
+//   background: url(../../images/comm/main1_cc.png) no-repeat 0 0;
+//   opacity: 0.1;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   height: 200%;
+// }
 .wrap {
   display: flex;
   flex-direction: column;
   max-width: 430px;
-
   margin: 0 auto;
+  height: 100%;
 }
 @media screen and (min-width: 1280px) {
   .wrap {
@@ -115,4 +116,61 @@ body::before {
   background: $white;
   z-index: 1100;
 }
+
+#footer {
+  @include flex;
+  // position: absolute;
+
+  // left: -50%;
+  // transform: translateX(50%);
+  text-align: center;
+  font-size: 10px;
+  width: 100%;
+  .ft-wrap {
+    display: block;
+  }
+  li {
+    margin: 5px 0;
+  }
+  .ft {
+    display: flex;
+    flex-direction: column;
+    font-family: Memento;
+  }
+  .contact :first-child {
+    color: $txtSub;
+    font-size: 18px;
+  }
+  .contact :nth-child(2) {
+    color: $txtInfo;
+    font-size: 16px;
+  }
+  .contact :nth-child(3) {
+    color: $txtInfo;
+    font-size: 14px;
+  }
+  .ft-menu-tit {
+    font-size: 16px;
+  }
+  .ft-menu-tit::after {
+    content: "";
+    // display: block;
+    margin: 3px auto;
+    border-bottom: 1px solid $txtSub;
+    width: 100px;
+  }
+  .terms {
+    flex-direction: row;
+    justify-content: center;
+    gap: 7px;
+  }
+  .f .ft-menu {
+    display: flex;
+    flex-direction: column;
+    li {
+      font-size: 12px;
+    }
+  }
+}
+
 @import "main";

@@ -33,6 +33,7 @@ button {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #111;
 }
 
 fieldset,
@@ -124,18 +125,7 @@ legend {
 
 body {
   position: relative;
-}
-
-body::before {
-  content: "";
-  background: url(../../images/comm/main1_cc.png) no-repeat 0 0;
-  opacity: 0.1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 200%;
+  height: 100%;
 }
 
 .wrap {
@@ -143,6 +133,7 @@ body::before {
   flex-direction: column;
   max-width: 430px;
   margin: 0 auto;
+  height: 100%;
 }
 
 @media screen and (min-width: 1280px) {
@@ -243,6 +234,60 @@ body::before {
   z-index: 1100;
 }
 
+#footer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  text-align: center;
+  font-size: 10px;
+  width: 100%;
+}
+#footer .ft-wrap {
+  display: block;
+}
+#footer li {
+  margin: 5px 0;
+}
+#footer .ft {
+  display: flex;
+  flex-direction: column;
+  font-family: Memento;
+}
+#footer .contact :first-child {
+  color: #333;
+  font-size: 18px;
+}
+#footer .contact :nth-child(2) {
+  color: #666;
+  font-size: 16px;
+}
+#footer .contact :nth-child(3) {
+  color: #666;
+  font-size: 14px;
+}
+#footer .ft-menu-tit {
+  font-size: 16px;
+}
+#footer .ft-menu-tit::after {
+  content: "";
+  margin: 3px auto;
+  border-bottom: 1px solid #333;
+  width: 100px;
+}
+#footer .terms {
+  flex-direction: row;
+  justify-content: center;
+  gap: 7px;
+}
+#footer .f .ft-menu {
+  display: flex;
+  flex-direction: column;
+}
+#footer .f .ft-menu li {
+  font-size: 12px;
+}
+
 .subtit {
   position: absolute;
   top: 20px;
@@ -262,6 +307,7 @@ body::before {
   min-width: 430px;
   -o-object-fit: contain;
      object-fit: contain;
+  background: linear-gradient(rgb(255, 31, 31), #f8f5f0);
 }
 
 .bestpd {
@@ -288,12 +334,10 @@ body::before {
   justify-content: center;
   align-content: center;
   flex-direction: row;
-  width: 200px;
   height: 225px;
 }
 .slide-bestpd a {
   display: block;
-  width: 156px;
   height: 156px;
 }
 .slide-bestpd img {
@@ -368,12 +412,29 @@ body::before {
   margin-top: 50px;
 }
 .auto-scroll-wrap .splide {
-  max-width: 800px;
+  max-width: 430px;
   margin: 0 auto;
   position: relative;
 }
+.auto-scroll-wrap .splide__arrow {
+  align-items: center;
+  background: rgba(229, 221, 221, 0);
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  height: 2em;
+  justify-content: center;
+  opacity: 0.7;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2em;
+  z-index: 1;
+}
 .auto-scroll-wrap .splide__track {
-  overflow: visible;
+  overflow: invisible;
 }
 
 .splide__slide {
@@ -381,7 +442,7 @@ body::before {
   background: #fff;
 }
 .splide__slide img {
-  width: 140px;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -427,11 +488,9 @@ body::before {
   justify-content: center;
   align-content: center;
   flex-direction: row;
-  width: 200px;
   height: 225px;
 }
 .slide-gift a {
-  width: 156px;
   height: 156px;
 }
 .slide-gift img {
@@ -463,16 +522,22 @@ body::before {
   color: #666;
 }
 
+.store-tit {
+  position: static;
+  margin: 20px 0;
+}
+
 .store {
   position: relative;
   background: #fff;
 }
 .store .swiper {
   margin: 0 auto;
-  height: 250px;
+  height: 360px;
 }
 .store .swiper-slide {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 22px;
@@ -482,5 +547,34 @@ body::before {
 .store img {
   -o-object-fit: contain;
      object-fit: contain;
-  height: 330px;
+  height: 200px;
+}
+.store .store-dt {
+  display: flex;
+  margin-top: 20px;
+  width: 82%;
+}
+.store .store-dt .store-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+.store .store-dt .store-search-wrap {
+  display: flex;
+}
+.store .store-dt .store-search-wrap input {
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-bottom-width: 1px;
+}
+.store .store-dt .store-search-wrap input:focus {
+  outline: none;
+}
+.store .store-dt .store-info {
+  text-align: right;
+  font-size: 12px;
+  font-weight: 400;
+}
+.store .store-dt .store-info div {
+  margin-bottom: 5px;
 }/*# sourceMappingURL=comm.css.map */

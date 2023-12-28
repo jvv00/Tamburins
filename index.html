@@ -378,7 +378,7 @@
           <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         </div>
         <div class="store">
-          <h2 class="subtit">STORE</h2>
+          <h2 class="subtit store-tit">STORE</h2>
 
           <div class="swiper slide-store">
             <div class="swiper-wrapper">
@@ -388,6 +388,14 @@
                     src="./images/main/tamburins_store_seongsu_1.png"
                     alt=""
                 /></a>
+                <div class="store-dt">
+                  <div class="store-name">플래그십 스토어 성수</div>
+                  <div class="store-info">
+                    <div class="store-adr">서울 성동구 연무장5길 8</div>
+                    <div class="store-contact">+82 70 4266 6142</div>
+                    <div class="store-time">월-일 12:00pm-9:00pm</div>
+                  </div>
+                </div>
               </div>
               <div class="swiper-slide">
                 <a href="#"
@@ -395,6 +403,14 @@
                     src="./images/main/tamburins_store_seongsu_2.png"
                     alt=""
                 /></a>
+                <div class="store-dt">
+                  <div class="store-name">플래그십 스토어 성수</div>
+                  <div class="store-info">
+                    <div class="store-adr">서울 성동구 연무장5길 8</div>
+                    <div class="store-contact">+82 70 4266 6142</div>
+                    <div class="store-time">월-일 12:00pm-9:00pm</div>
+                  </div>
+                </div>
               </div>
               <div class="swiper-slide">Slide 3</div>
               <div class="swiper-slide">Slide 4</div>
@@ -405,41 +421,83 @@
               <div class="swiper-slide">Slide 9</div>
             </div>
           </div>
+          <div class="store-dt">
+            <div>
+              <div class="store-name">플래그십 스토어 성수</div>
+              <div class="store-search-wrap">
+                <div>
+                  <input
+                    type="text"
+                    placeholder="가까운 매장 찾기"
+                    class="input-store-search"
+                  />
+                  <label
+                    for="input-store-search"
+                    class="label-store-search"
+                  ></label>
+                </div>
+                <button class="store-search-submit">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="circum:search">
+                      <path
+                        id="Vector"
+                        d="M13.354 13.86C13.6606 14.1667 14.134 13.6934 13.8273 13.3934L11.3273 10.8867C12.2043 9.91638 12.689 8.6546 12.6873 7.34671C12.6873 4.42004 10.3073 2.04004 7.38064 2.04004C4.45397 2.04004 2.07397 4.42004 2.07397 7.34671C2.07397 10.2734 4.45397 12.6534 7.38064 12.6534C8.70064 12.6534 9.92064 12.1667 10.854 11.36L13.354 13.86ZM2.73997 7.34671C2.73997 4.78671 4.82664 2.70671 7.37997 2.70671C9.93997 2.70671 12.02 4.78671 12.02 7.34671C12.02 9.90671 9.93997 11.9867 7.37997 11.9867C4.82664 11.9867 2.73997 9.90671 2.73997 7.34671Z"
+                        fill="#666666"
+                        stroke="#666666"
+                        stroke-width="0.5"
+                      />
+                    </g>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <!-- <div class="store-info">
+              <div class="store-adr">서울 성동구 연무장5길 8</div>
+              <div class="store-contact">+82 70 4266 6142</div>
+              <div class="store-time">월-일 12:00pm-9:00pm</div>
+            </div> -->
+          </div>
         </div>
       </main>
       <footer id="footer">
-        <ul>
+        <ul class="ft-wrap">
           <li>㈜아이아이컴바인드</li>
           <li>서울특별시 마포구 어울마당로5길 41</li>
           <li>대표자: 김한국</li>
-          <ul>
+          <ul class="ft mail">
             <li>대표번호: 1644-1246</li>
             <li>이메일: cs@tamburins.com</li>
           </ul>
           <li>사업자등록번호: 119-86-38589</li>
           <li>개인정보 보호 책임자: 정태호</li>
-          <ul>
+          <ul class="ft terms">
             <li>이용약관</li>
             <li>개인정보처리방침</li>
             <li>서비스 가입사실 확인</li>
           </ul>
-          <ul>
+          <ul class="ft contact">
             <li>1644-1246</li>
             <li>09:30 ~ 17:00</li>
             <li>lunch 11:30 ~ 13:30</li>
           </ul>
-          <ul>
+          <ul class="ft menu">
             <li>
-              INFO
-              <ul>
+              <h4 class="ft ft-menu-tit">INFO</h4>
+              <ul class="ft ft-menu">
                 <li><a href="#">공지사항</a></li>
                 <li><a href="#">적립금 현황</a></li>
                 <li><a href="#">자주 묻는 질문</a></li>
               </ul>
             </li>
             <li>
-              CONTACT
-              <ul>
+              <h4 class="ft ft-menu-tit">CONTACT</h4>
+              <ul class="ft ft-menu">
                 <li><a href="#">주문 배송 조회</a></li>
                 <li><a href="#">고객서비스</a></li>
                 <li><a href="#">1:1 문의하기</a></li>
@@ -447,14 +505,14 @@
               </ul>
             </li>
             <li>
-              FOR GIFT
-              <ul>
+              <h4 class="ft ft-menu-tit">FOR GIFT</h4>
+              <ul class="ft ft-menu">
                 <li><a href="#">온라인 서비스</a></li>
               </ul>
             </li>
             <li>
-              SOCIAL
-              <ul>
+              <h4 class="ft ft-menu-tit">SOCIAL</h4>
+              <ul class="ft ft-menu">
                 <li><a href="#">INSTAGRAM</a></li>
                 <li><a href="#">KAKAOTALK</a></li>
                 <li><a href="#">WEIBO</a></li>

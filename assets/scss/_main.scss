@@ -16,6 +16,7 @@
   img {
     min-width: 430px;
     object-fit: contain;
+    background: linear-gradient(rgb(255, 31, 31), $primary);
   }
 }
 .bestpd {
@@ -34,12 +35,10 @@
   }
   .swiper-slide {
     @include flex;
-    width: 200px;
     height: 225px;
   }
   a {
     display: block;
-    width: 156px;
     height: 156px;
   }
   img {
@@ -111,12 +110,32 @@
 .auto-scroll-wrap {
   margin-top: 50px;
   .splide {
-    max-width: 800px;
+    max-width: 430px;
     margin: 0 auto;
     position: relative;
   }
+  .splide__arrow {
+    -ms-flex-align: center;
+    align-items: center;
+    background: #e5dddd00;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    display: -ms-flexbox;
+    display: flex;
+    height: 2em;
+    -ms-flex-pack: center;
+    justify-content: center;
+    opacity: 0.7;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2em;
+    z-index: 1;
+  }
   .splide__track {
-    overflow: visible;
+    overflow: invisible;
   }
 }
 
@@ -126,7 +145,7 @@
   // border-radius: 5px;
   background: $white;
   img {
-    width: 140px;
+    width: 100%;
     object-fit: cover;
   }
   .newpd-dt {
@@ -164,12 +183,11 @@
   }
   .swiper-slide {
     @include flex;
-    width: 200px;
     height: 225px;
   }
   a {
     // display: block;
-    width: 156px;
+
     height: 156px;
   }
   img {
@@ -203,15 +221,20 @@
   }
 }
 
+.store-tit {
+  position: static;
+  margin: 20px 0;
+}
 .store {
   position: relative;
   background: $white;
   .swiper {
     margin: 0 auto;
-    height: 250px;
+    height: 360px;
   }
   .swiper-slide {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: 22px;
@@ -220,6 +243,42 @@
   }
   img {
     object-fit: contain;
-    height: 330px;
+    height: 200px;
+  }
+  .store-dt {
+    // position: relative;
+    display: flex;
+    margin-top: 20px;
+    width: 82%;
+    .store-name {
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .store-search-wrap {
+      display: flex;
+      input {
+        border-left-width: 0;
+        border-right-width: 0;
+        border-top-width: 0;
+        border-bottom-width: 1px;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .store-info {
+      // position: absolute;
+      // top: 0;
+      // right: 0;
+      text-align: right;
+      font-size: 12px;
+      font-weight: 400;
+      div {
+        margin-bottom: 5px;
+      }
+    }
   }
 }
