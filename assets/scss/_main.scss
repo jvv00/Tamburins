@@ -8,24 +8,32 @@
 }
 
 .slide {
+  --swiper-theme-color: #ff0000;
   position: relative;
 
   .swiper-slide {
     height: 690px;
   }
   img {
-    min-width: 430px;
-    object-fit: contain;
-    background: linear-gradient(rgb(255, 31, 31), $primary);
+    // min-width: 430px;
+    height: 690px;
+    width: 100%;
+    object-fit: cover;
+
+    // background: linear-gradient(rgb(255, 31, 31), $primary);
   }
 }
 .bestpd {
   position: relative;
+  .inner {
+    padding: 0 16px;
+    background: $primary;
+  }
 }
 .slide-bestpd {
   @include flex;
   height: 390px;
-  background: $primary;
+
   flex-wrap: wrap;
   align-content: center;
   .swiper-wrapper {
@@ -93,7 +101,7 @@
   @include flex;
   flex-direction: column;
   position: relative;
-  width: 430px;
+  // width: 430px;
   height: 726px;
   font-family: "Memento";
   font-size: 20px;
@@ -110,8 +118,8 @@
 .auto-scroll-wrap {
   margin-top: 50px;
   .splide {
-    max-width: 430px;
-    margin: 0 auto;
+    // max-width: 430px;
+    margin: auto;
     position: relative;
   }
   .splide__arrow {
@@ -135,12 +143,12 @@
     z-index: 1;
   }
   .splide__track {
-    overflow: invisible;
+    overflow: visible;
   }
 }
 
 .splide__slide {
-  height: 220px;
+  // height: 220px;
   // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   // border-radius: 5px;
   background: $white;
@@ -171,6 +179,10 @@
 }
 .gift {
   position: relative;
+  .inner {
+    padding: 0 16px;
+    background: $primary;
+  }
 }
 .slide-gift {
   @include flex;
@@ -230,7 +242,7 @@
   background: $white;
   .swiper {
     margin: 0 auto;
-    height: 360px;
+    height: 60%;
   }
   .swiper-slide {
     display: flex;
@@ -245,11 +257,14 @@
     object-fit: contain;
     height: 200px;
   }
+
   .store-dt {
     // position: relative;
     display: flex;
+    justify-content: space-between;
     margin-top: 20px;
     width: 82%;
+
     .store-name {
       // position: absolute;
       // top: 0;
@@ -257,18 +272,7 @@
       font-size: 14px;
       font-weight: 500;
     }
-    .store-search-wrap {
-      display: flex;
-      input {
-        border-left-width: 0;
-        border-right-width: 0;
-        border-top-width: 0;
-        border-bottom-width: 1px;
-        &:focus {
-          outline: none;
-        }
-      }
-    }
+
     .store-info {
       // position: absolute;
       // top: 0;
@@ -278,6 +282,22 @@
       font-weight: 400;
       div {
         margin-bottom: 5px;
+      }
+    }
+  }
+  .store-search-wrap {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 9%;
+    input {
+      border-left-width: 0;
+      border-right-width: 0;
+      border-top-width: 0;
+      border-bottom-width: 1px;
+      width: 40%;
+      font-size: 14px;
+      &:focus {
+        outline: none;
       }
     }
   }

@@ -1,14 +1,14 @@
-var swiper1 = new Swiper(".slide", {
+var swiper = new Swiper(".slide", {
   slidesPerView: 1,
   spaceBetween: 0,
-  autoplay: true,
+  autoplay: false,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
 });
 
-var swiper2 = new Swiper(".slide-bestpd", {
+var swiper = new Swiper(".slide-bestpd", {
   slidesPerView: 1.8,
   spaceBetween: 30,
   pagination: {
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   splide.mount(window.splide.Extensions);
 });
 
-var swiper3 = new Swiper(".slide-gift", {
+var swiper = new Swiper(".slide-gift", {
   slidesPerView: 2,
   spaceBetween: 30,
   pagination: {
@@ -40,7 +40,7 @@ var swiper3 = new Swiper(".slide-gift", {
   },
 });
 
-var swiper4 = new Swiper(".slide-store", {
+var swiper = new Swiper(".slide-store", {
   grabCursor: true,
   effect: "creative",
   creativeEffect: {

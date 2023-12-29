@@ -51,11 +51,14 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script defer src="./assets/js/comm.js"></script>
   </head>
@@ -66,7 +69,7 @@
   <body>
     <div class="wrap">
       <header id="header">
-        <div class="inner">
+        <div class="inner header">
           <h1 id="logo">
             <a href="#">
               <svg
@@ -131,7 +134,29 @@
                 <span class="bar"></span>
                 <span class="blind">전체 메뉴 보기</span>
               </label>
-              <div id="gnb">전체 메뉴</div>
+              <div id="gnb">
+                전체 메뉴
+                <ul class="gnb menu">
+                  <li class="gnb product">
+                    <a href="#">PRODUCT</a>
+                    <ul class="gnb submenu">
+                      <li><a href="#">SKIN CARE</a></li>
+                      <li><a href="#">SKIN CARE</a></li>
+                      <li><a href="#">SKIN CARE</a></li>
+                      <li><a href="#">SKIN CARE</a></li>
+                    </ul>
+                  </li>
+                  <li class="gnb gift"><a href="#">FOR GIFT</a></li>
+                  <li class="gnb store"><a href="#">STORE</a></li>
+                  <li class="gnb service"><a href="#">SERVICE</a></li>
+                  <li class="gnb social"><a href="#">SOCIAL</a></li>
+
+                  <ul>
+                    <li>MY PAGE</li>
+                    <li>LOG IN</li>
+                  </ul>
+                </ul>
+              </div>
             </nav>
             <!-- util -->
             <div class="util"></div>
@@ -171,83 +196,87 @@
 
         <!-- Initialize Swiper -->
         <div class="bestpd">
-          <h2 class="subtit">BEST PRODUCT</h2>
-          <div class="swiper slide-bestpd">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="bestpd-wrap">
-                  <a href="#">
-                    <img
-                      src="./images/main/tamburins_chamo_purfume.png"
-                      alt="#"
-                    />
-                  </a>
-                  <div class="bestpd-dt">
-                    <div class="bestpd-name">퍼퓸 카모</div>
-                    <ul class="bestpd-info">
-                      <li>진득한 카모마일</li>
-                      <li>부드러운 나무결</li>
-                      <li>머스크</li>
-                    </ul>
+          <div class="inner bestpd">
+            <h2 class="subtit">BEST PRODUCT</h2>
+            <div class="swiper slide-bestpd">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="bestpd-wrap">
+                    <a href="#">
+                      <img
+                        src="./images/main/tamburins_chamo_purfume.png"
+                        alt="#"
+                      />
+                    </a>
+                    <div class="bestpd-dt">
+                      <div class="bestpd-name">퍼퓸 카모</div>
+                      <ul class="bestpd-info">
+                        <li>진득한 카모마일</li>
+                        <li>부드러운 나무결</li>
+                        <li>머스크</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="bestpd-wrap">
+                    <a href="#">
+                      <img
+                        src="./images/main/tamburins_toilet_fragnance.png"
+                        alt="#"
+                      />
+                    </a>
+                    <div class="bestpd-dt">
+                      <div class="bestpd-name">
+                        토일렛 프래그넌스 세이지마리
+                      </div>
+                      <ul class="bestpd-info">
+                        <li>클라리세이지</li>
+                        <li>로즈마리</li>
+                        <li>만다린</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="bestpd-wrap">
+                    <a href="#">
+                      <img
+                        src="./images/main/tamburins_chamo_purfumehand.png"
+                        alt="#"
+                      />
+                    </a>
+                    <div class="bestpd-dt">
+                      <div class="bestpd-name">퍼퓸 쉘 엑스 카모</div>
+                      <ul class="bestpd-info">
+                        <li>진득한 카모마일</li>
+                        <li>부드러운 나무결</li>
+                        <li>머스크</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="bestpd-wrap">
+                    <a href="#">
+                      <img
+                        src="./images/main/tamburins_chamo_handwash.png"
+                        alt="#"
+                      />
+                    </a>
+                    <div class="bestpd-dt">
+                      <div class="bestpd-name">핸드워시 카모</div>
+                      <ul class="bestpd-info">
+                        <li>진득한 카모마일</li>
+                        <li>부드러운 나무결</li>
+                        <li>머스크</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">
-                <div class="bestpd-wrap">
-                  <a href="#">
-                    <img
-                      src="./images/main/tamburins_toilet_fragnance.png"
-                      alt="#"
-                    />
-                  </a>
-                  <div class="bestpd-dt">
-                    <div class="bestpd-name">토일렛 프래그넌스 세이지마리</div>
-                    <ul class="bestpd-info">
-                      <li>클라리세이지</li>
-                      <li>로즈마리</li>
-                      <li>만다린</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="bestpd-wrap">
-                  <a href="#">
-                    <img
-                      src="./images/main/tamburins_chamo_purfumehand.png"
-                      alt="#"
-                    />
-                  </a>
-                  <div class="bestpd-dt">
-                    <div class="bestpd-name">퍼퓸 쉘 엑스 카모</div>
-                    <ul class="bestpd-info">
-                      <li>진득한 카모마일</li>
-                      <li>부드러운 나무결</li>
-                      <li>머스크</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="bestpd-wrap">
-                  <a href="#">
-                    <img
-                      src="./images/main/tamburins_chamo_handwash.png"
-                      alt="#"
-                    />
-                  </a>
-                  <div class="bestpd-dt">
-                    <div class="bestpd-name">핸드워시 카모</div>
-                    <ul class="bestpd-info">
-                      <li>진득한 카모마일</li>
-                      <li>부드러운 나무결</li>
-                      <li>머스크</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              <div class="swiper-pagination"></div>
             </div>
-            <div class="swiper-pagination"></div>
           </div>
 
           <!-- Swiper JS -->
@@ -298,84 +327,87 @@
           </div>
         </div>
         <div class="gift">
-          <h2 class="subtit">FOR GIFT</h2>
-          <div class="swiper slide-gift">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="gift-wrap">
-                  <a href="#">
-                    <img src="./images/main/tamburins_gift_1.png" alt="#" />
-                  </a>
-                  <div class="gift-dt">
-                    <div class="gift-name">손 소독제 트리오</div>
-                    <div class="gift-info">손 소독제 세가지 향(000+FEY9+7)</div>
+          <div class="inner gift">
+            <h2 class="subtit">FOR GIFT</h2>
+            <div class="swiper slide-gift">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="gift-wrap">
+                    <a href="#">
+                      <img src="./images/main/tamburins_gift_1.png" alt="#" />
+                    </a>
+                    <div class="gift-dt">
+                      <div class="gift-name">손 소독제 트리오</div>
+                      <div class="gift-info">
+                        손 소독제 세가지 향(000+FEY9+7)
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="gift-wrap">
-                  <a href="#">
-                    <img src="./images/main/tamburins_gift_2.png" alt="#" />
-                  </a>
-                  <div class="gift-dt">
-                    <div class="gift-name">퍼퓸드 핸드앤바디 듀오 세트</div>
-                    <div class="gift-info">워시&에멀전</div>
+                <div class="swiper-slide">
+                  <div class="gift-wrap">
+                    <a href="#">
+                      <img src="./images/main/tamburins_gift_2.png" alt="#" />
+                    </a>
+                    <div class="gift-dt">
+                      <div class="gift-name">퍼퓸드 핸드앤바디 듀오 세트</div>
+                      <div class="gift-info">워시&에멀전</div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="gift-wrap">
-                  <a href="#">
-                    <img src="./images/main/tamburins_gift_3.png" alt="#" />
-                  </a>
-                  <div class="gift-dt">
-                    <div class="gift-name">바디듀오 BIGALICO</div>
-                    <div class="gift-info">샤워리바디워시&로션</div>
+                <div class="swiper-slide">
+                  <div class="gift-wrap">
+                    <a href="#">
+                      <img src="./images/main/tamburins_gift_3.png" alt="#" />
+                    </a>
+                    <div class="gift-dt">
+                      <div class="gift-name">바디듀오 BIGALICO</div>
+                      <div class="gift-info">샤워리바디워시&로션</div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="gift-wrap">
-                  <a href="#">
-                    <img src="./images/main/tamburins_gift_4.png" alt="#" />
-                  </a>
-                  <div class="gift-dt">
-                    <div class="gift-name">퍼퓸핸드 미니 7 세트</div>
-                    <div class="gift-info">퍼퓸핸드 7가지 향</div>
+                <div class="swiper-slide">
+                  <div class="gift-wrap">
+                    <a href="#">
+                      <img src="./images/main/tamburins_gift_4.png" alt="#" />
+                    </a>
+                    <div class="gift-dt">
+                      <div class="gift-name">퍼퓸핸드 미니 7 세트</div>
+                      <div class="gift-info">퍼퓸핸드 7가지 향</div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="gift-wrap">
-                  <a href="#">
-                    <img src="./images/main/tamburins_gift_5.png" alt="#" />
-                  </a>
-                  <div class="gift-dt">
-                    <div class="gift-name">퍼퓸핸드 미니 듀오 세트 베스트</div>
-                    <div class="gift-info">퍼퓸핸드 베스트 향(FEY9+VEIN)</div>
+                <div class="swiper-slide">
+                  <div class="gift-wrap">
+                    <a href="#">
+                      <img src="./images/main/tamburins_gift_5.png" alt="#" />
+                    </a>
+                    <div class="gift-dt">
+                      <div class="gift-name">
+                        퍼퓸핸드 미니 듀오 세트 베스트
+                      </div>
+                      <div class="gift-info">퍼퓸핸드 베스트 향(FEY9+VEIN)</div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="gift-wrap">
-                  <a href="#">
-                    <img src="./images/main/tamburins_gift_6.png" alt="#" />
-                  </a>
-                  <div class="gift-dt">
-                    <div class="gift-name">퍼퓸 비누&쉘</div>
-                    <div class="gift-info">
-                      특별한 퍼퓸 핸드케어 세트(CHAMO+VEIN)
+                <div class="swiper-slide">
+                  <div class="gift-wrap">
+                    <a href="#">
+                      <img src="./images/main/tamburins_gift_6.png" alt="#" />
+                    </a>
+                    <div class="gift-dt">
+                      <div class="gift-name">퍼퓸 비누&쉘</div>
+                      <div class="gift-info">
+                        특별한 퍼퓸 핸드케어 세트(CHAMO+VEIN)
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+
+              <div class="swiper-pagination"></div>
             </div>
-
-            <div class="swiper-pagination"></div>
           </div>
-
-          <!-- Swiper JS -->
-          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         </div>
         <div class="store">
           <h2 class="subtit store-tit">STORE</h2>
@@ -400,7 +432,7 @@
               <div class="swiper-slide">
                 <a href="#"
                   ><img
-                    src="./images/main/tamburins_store_seongsu_2.png"
+                    src="./images/main/tamburins_store_seongsu_1.png"
                     alt=""
                 /></a>
                 <div class="store-dt">
@@ -412,56 +444,50 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">Slide 3</div>
-              <div class="swiper-slide">Slide 4</div>
-              <div class="swiper-slide">Slide 5</div>
-              <div class="swiper-slide">Slide 6</div>
-              <div class="swiper-slide">Slide 7</div>
-              <div class="swiper-slide">Slide 8</div>
-              <div class="swiper-slide">Slide 9</div>
-            </div>
-          </div>
-          <div class="store-dt">
-            <div>
-              <div class="store-name">플래그십 스토어 성수</div>
-              <div class="store-search-wrap">
-                <div>
-                  <input
-                    type="text"
-                    placeholder="가까운 매장 찾기"
-                    class="input-store-search"
-                  />
-                  <label
-                    for="input-store-search"
-                    class="label-store-search"
-                  ></label>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><img
+                    src="./images/main/tamburins_store_seongsu_1.png"
+                    alt=""
+                /></a>
+                <div class="store-dt">
+                  <div class="store-name">플래그십 스토어 성수</div>
+                  <div class="store-info">
+                    <div class="store-adr">서울 성동구 연무장5길 8</div>
+                    <div class="store-contact">+82 70 4266 6142</div>
+                    <div class="store-time">월-일 12:00pm-9:00pm</div>
+                  </div>
                 </div>
-                <button class="store-search-submit">
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g id="circum:search">
-                      <path
-                        id="Vector"
-                        d="M13.354 13.86C13.6606 14.1667 14.134 13.6934 13.8273 13.3934L11.3273 10.8867C12.2043 9.91638 12.689 8.6546 12.6873 7.34671C12.6873 4.42004 10.3073 2.04004 7.38064 2.04004C4.45397 2.04004 2.07397 4.42004 2.07397 7.34671C2.07397 10.2734 4.45397 12.6534 7.38064 12.6534C8.70064 12.6534 9.92064 12.1667 10.854 11.36L13.354 13.86ZM2.73997 7.34671C2.73997 4.78671 4.82664 2.70671 7.37997 2.70671C9.93997 2.70671 12.02 4.78671 12.02 7.34671C12.02 9.90671 9.93997 11.9867 7.37997 11.9867C4.82664 11.9867 2.73997 9.90671 2.73997 7.34671Z"
-                        fill="#666666"
-                        stroke="#666666"
-                        stroke-width="0.5"
-                      />
-                    </g>
-                  </svg>
-                </button>
               </div>
             </div>
-            <!-- <div class="store-info">
-              <div class="store-adr">서울 성동구 연무장5길 8</div>
-              <div class="store-contact">+82 70 4266 6142</div>
-              <div class="store-time">월-일 12:00pm-9:00pm</div>
-            </div> -->
+          </div>
+          <div class="store-search-wrap">
+            <input
+              type="text"
+              placeholder="가까운 매장 찾기"
+              class="input-store-search"
+            />
+            <label for="input-store-search" class="label-store-search"></label>
+
+            <button class="store-search-submit">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="circum:search">
+                  <path
+                    id="Vector"
+                    d="M13.354 13.86C13.6606 14.1667 14.134 13.6934 13.8273 13.3934L11.3273 10.8867C12.2043 9.91638 12.689 8.6546 12.6873 7.34671C12.6873 4.42004 10.3073 2.04004 7.38064 2.04004C4.45397 2.04004 2.07397 4.42004 2.07397 7.34671C2.07397 10.2734 4.45397 12.6534 7.38064 12.6534C8.70064 12.6534 9.92064 12.1667 10.854 11.36L13.354 13.86ZM2.73997 7.34671C2.73997 4.78671 4.82664 2.70671 7.37997 2.70671C9.93997 2.70671 12.02 4.78671 12.02 7.34671C12.02 9.90671 9.93997 11.9867 7.37997 11.9867C4.82664 11.9867 2.73997 9.90671 2.73997 7.34671Z"
+                    fill="#666666"
+                    stroke="#666666"
+                    stroke-width="0.5"
+                  />
+                </g>
+              </svg>
+            </button>
           </div>
         </div>
       </main>

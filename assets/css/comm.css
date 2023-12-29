@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Memento";
-  font-weight: 300;
+  font-weight: 700;
   src: url(../fonts/Memento\ Bold.woff) format("woff");
 }
 body,
@@ -131,7 +131,6 @@ body {
 .wrap {
   display: flex;
   flex-direction: column;
-  max-width: 430px;
   margin: 0 auto;
   height: 100%;
 }
@@ -143,14 +142,13 @@ body {
 }
 #header {
   position: fixed;
-  width: 100vh;
+  width: 100%;
   height: 50px;
   z-index: 1200;
 }
 
-.inner {
+.inner.header {
   position: relative;
-  width: 430px;
 }
 
 #logo {
@@ -242,6 +240,7 @@ body {
   text-align: center;
   font-size: 10px;
   width: 100%;
+  margin-top: 7.5rem;
 }
 #footer .ft-wrap {
   display: block;
@@ -252,7 +251,10 @@ body {
 #footer .ft {
   display: flex;
   flex-direction: column;
-  font-family: Memento;
+  font-family: "Memento";
+}
+#footer .ft .menu {
+  margin: 16px 0;
 }
 #footer .contact :first-child {
   color: #333;
@@ -280,11 +282,11 @@ body {
   justify-content: center;
   gap: 7px;
 }
-#footer .f .ft-menu {
+#footer .ft .ft-menu {
   display: flex;
   flex-direction: column;
 }
-#footer .f .ft-menu li {
+#footer .ft .ft-menu li {
   font-size: 12px;
 }
 
@@ -298,20 +300,25 @@ body {
 }
 
 .slide {
+  --swiper-theme-color: #ff0000;
   position: relative;
 }
 .slide .swiper-slide {
   height: 690px;
 }
 .slide img {
-  min-width: 430px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  background: linear-gradient(rgb(255, 31, 31), #f8f5f0);
+  height: 690px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .bestpd {
   position: relative;
+}
+.bestpd .inner {
+  padding: 0 16px;
+  background: #f8f5f0;
 }
 
 .slide-bestpd {
@@ -320,7 +327,6 @@ body {
   align-content: center;
   flex-direction: row;
   height: 390px;
-  background: #f8f5f0;
   flex-wrap: wrap;
   align-content: center;
 }
@@ -394,7 +400,6 @@ body {
   flex-direction: row;
   flex-direction: column;
   position: relative;
-  width: 430px;
   height: 726px;
   font-family: "Memento";
   font-size: 20px;
@@ -412,8 +417,7 @@ body {
   margin-top: 50px;
 }
 .auto-scroll-wrap .splide {
-  max-width: 430px;
-  margin: 0 auto;
+  margin: auto;
   position: relative;
 }
 .auto-scroll-wrap .splide__arrow {
@@ -434,11 +438,10 @@ body {
   z-index: 1;
 }
 .auto-scroll-wrap .splide__track {
-  overflow: invisible;
+  overflow: visible;
 }
 
 .splide__slide {
-  height: 220px;
   background: #fff;
 }
 .splide__slide img {
@@ -468,6 +471,10 @@ body {
 
 .gift {
   position: relative;
+}
+.gift .inner {
+  padding: 0 16px;
+  background: #f8f5f0;
 }
 
 .slide-gift {
@@ -533,7 +540,7 @@ body {
 }
 .store .swiper {
   margin: 0 auto;
-  height: 360px;
+  height: 60%;
 }
 .store .swiper-slide {
   display: flex;
@@ -551,24 +558,13 @@ body {
 }
 .store .store-dt {
   display: flex;
+  justify-content: space-between;
   margin-top: 20px;
   width: 82%;
 }
 .store .store-dt .store-name {
   font-size: 14px;
   font-weight: 500;
-}
-.store .store-dt .store-search-wrap {
-  display: flex;
-}
-.store .store-dt .store-search-wrap input {
-  border-left-width: 0;
-  border-right-width: 0;
-  border-top-width: 0;
-  border-bottom-width: 1px;
-}
-.store .store-dt .store-search-wrap input:focus {
-  outline: none;
 }
 .store .store-dt .store-info {
   text-align: right;
@@ -577,4 +573,20 @@ body {
 }
 .store .store-dt .store-info div {
   margin-bottom: 5px;
+}
+.store .store-search-wrap {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 9%;
+}
+.store .store-search-wrap input {
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-bottom-width: 1px;
+  width: 40%;
+  font-size: 14px;
+}
+.store .store-search-wrap input:focus {
+  outline: none;
 }/*# sourceMappingURL=comm.css.map */

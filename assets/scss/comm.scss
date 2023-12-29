@@ -18,7 +18,7 @@ body {
 .wrap {
   display: flex;
   flex-direction: column;
-  max-width: 430px;
+  // max-width: 430px;
   margin: 0 auto;
   height: 100%;
 }
@@ -29,14 +29,14 @@ body {
 }
 #header {
   position: fixed;
-  width: 100vh;
+  width: 100%;
   height: $hdH;
   z-index: 1200;
 }
 
-.inner {
+.inner.header {
   position: relative;
-  width: 430px;
+  // width: 430px;
 }
 #logo {
   @include flex;
@@ -126,6 +126,8 @@ body {
   text-align: center;
   font-size: 10px;
   width: 100%;
+  margin-top: 7.5rem;
+
   .ft-wrap {
     display: block;
   }
@@ -135,7 +137,10 @@ body {
   .ft {
     display: flex;
     flex-direction: column;
-    font-family: Memento;
+    font-family: "Memento";
+    .menu {
+      margin: 16px 0;
+    }
   }
   .contact :first-child {
     color: $txtSub;
@@ -149,6 +154,7 @@ body {
     color: $txtInfo;
     font-size: 14px;
   }
+
   .ft-menu-tit {
     font-size: 16px;
   }
@@ -164,9 +170,10 @@ body {
     justify-content: center;
     gap: 7px;
   }
-  .f .ft-menu {
+  .ft .ft-menu {
     display: flex;
     flex-direction: column;
+
     li {
       font-size: 12px;
     }
