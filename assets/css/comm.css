@@ -301,8 +301,25 @@ body {
   --swiper-theme-color: #ff0000;
   position: relative;
 }
+.slide .swiper-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(rgba(255, 31, 31, 0.1) 10%, rgba(255, 31, 31, 0.2) 50%, #f8f5f0);
+}
 .slide .swiper-slide {
   height: 690px;
+}
+.slide .slide-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.slide a {
+  cursor: pointer;
 }
 .slide img {
   height: 690px;
@@ -433,7 +450,7 @@ body {
   z-index: 1;
 }
 .auto-scroll-wrap .splide__track {
-  overflow: visible;
+  overflow: invisible;
 }
 
 .splide__slide {

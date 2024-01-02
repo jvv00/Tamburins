@@ -8,17 +8,37 @@
 .slide {
   --swiper-theme-color: #ff0000;
   position: relative;
-
+  .swiper-slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+      rgba(255, 31, 31,0.1)10%,
+      rgba(255, 31, 31,0.2)50%,
+       $primary
+      );
+  }
   .swiper-slide {
     height: 690px;
   }
+ .slide-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+ }
+ a {
+  cursor: pointer;
+ }
   img {
     // min-width: 430px;
     height: 690px;
     width: 100%;
     object-fit: cover;
 
-    // background: linear-gradient(rgb(255, 31, 31), $primary);
+    
   }
 }
 .bestpd {
@@ -141,7 +161,7 @@
     z-index: 1;
   }
   .splide__track {
-    overflow: visible;
+    overflow: invisible;
   }
 }
 
