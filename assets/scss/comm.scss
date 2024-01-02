@@ -4,17 +4,7 @@ body {
   height: 100%;
   // opacity: 0.8;
 }
-// body::before {
-//   content: "";
-//   background: url(../../images/comm/main1_cc.png) no-repeat 0 0;
-//   opacity: 0.1;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   height: 200%;
-// }
+
 .wrap {
   display: flex;
   flex-direction: column;
@@ -25,6 +15,7 @@ body {
 @media screen and (min-width: 1280px) {
   .wrap {
     max-width: none;
+    
   }
 }
 #header {
@@ -43,12 +34,16 @@ body {
 
   a {
     display: flex;
-    justify-content: center;
+    justify-content:center;
     position: absolute;
     z-index: 1200;
     padding: 16px 0;
+    svg {
+      height: 16px;
+    }
   }
 }
+
 .col_right {
   position: absolute;
   top: 0;
@@ -115,6 +110,48 @@ body {
   width: 100%;
   background: $white;
   z-index: 1100;
+}
+
+@media screen and (min-width: $breakpoint-xl) {
+  #header {
+    max-width: none;
+    
+  }
+  .inner.header {
+    position: static;
+    display: flex;
+    justify-content: space-between;
+    height: $hdH-Desk;
+    padding: 35px 80px;
+  }
+  #logo {
+    display: flex;
+    justify-content: flex-start;
+    vertical-align: middle;
+    align-items: center;
+    align-content: center;
+  
+    a {
+      // display: flex;
+      // position: absolute;
+      z-index: 1200;
+      padding: 0;
+      svg {
+        height: 25px;
+      }
+    }
+  }
+  .col_right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: $hdH-Desk;
+    // z-index: 1100;
+
+  }
+  .gnb-wrap {
+    height: $hdH-Desk;
+  }
 }
 
 #footer {
