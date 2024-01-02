@@ -1,3 +1,10 @@
 {
-  "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5502,
+  "liveServer.settings.CustomBrowser": "chrome",
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.useNewCompiler": false,
+  "liveSassCompile.settings.autoprefix": [
+    
+
+  ]
 }
