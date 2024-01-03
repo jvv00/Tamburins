@@ -79,6 +79,7 @@
   }
   .swiper-slide {
     @include flex;
+    position: relative;
     // height: 225px;
   }
   a {
@@ -100,11 +101,6 @@
   flex-direction: column;
   text-align: center;
   width: 100%;
-  
-  // & :hover {
-  //   img {
-  //     transform: scale(120%);
-  //   }
 }
 
 .bestpd-dt {
@@ -134,7 +130,7 @@
     height: 8px;
   }
 }
-.button {
+.bestpd-hidden {
   display: none;
 }
 
@@ -158,41 +154,65 @@
       
     }
   }
-  
+  .bestpd-btn{
+    opacity: 0;
+  }
   .bestpd .swiper-slide {
-    background: rgba(0,0,0,0);
     & :hover {
       background:rgba(211, 211, 211, 0.5) ;
 
       img {
-        transform: scale(1.2);
+        transform: translateY(-25%) scale(1.4);
+        background: rgba(255, 255, 255, 0);
+      }
+      .bestpd-wrap {
+        background: rgba(255, 255, 255, 0);
+      }
+      a{
+        background: rgba(255, 255, 255, 0);
       }
       .bestpd-dt {
         display: none;
       }
-      
-    }
-  }
-  .button {
-    display: none;
-    position: relative;
-    width: 200px;
-    height: 30px;
-    background-color: #f0f0f0;
-    .button.atc {
+      .bestpd-hidden {
+        @include flex;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        margin-top: 7.5px;
+        background: $txtSub;
+        
+        &:hover {
+          opacity: 1;
+          transition: opacity 0.3s ease;
+        }
+          p{
+            font-size: 14px;
+            font-weight: 400;
+            padding: 0 5px;
+            background: rgba(255, 255, 255, 0);
+          }
 
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      transition: opacity 0.3 ease;
-
-      &:hover {
-        display: block;
-        opacity: 1;
+          .bestpd-btn {
+            position: absolute;
+            width: 100%;
+            padding: 20px 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: opacity 0.3s ease;
+            
+            
+            .atc {
+              color: $white;
+              background: rgba(255, 255, 255, 0);
+            }
+          }
+        }
+        
       }
     }
-  }
+  
 }
 // new product
 .newpd {

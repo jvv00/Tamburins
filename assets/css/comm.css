@@ -396,6 +396,7 @@ body {
   justify-content: center;
   align-content: center;
   flex-direction: row;
+  position: relative;
 }
 .slide-bestpd a {
   display: block;
@@ -450,7 +451,7 @@ body {
   height: 8px;
 }
 
-.button {
+.bestpd-hidden {
   display: none;
 }
 
@@ -467,35 +468,58 @@ body {
   .bestpd-name .bestpd-info {
     font-size: 14px;
   }
-  .bestpd .swiper-slide {
-    background: rgba(0, 0, 0, 0);
+  .bestpd-btn {
+    opacity: 0;
   }
   .bestpd .swiper-slide :hover {
     background: rgba(211, 211, 211, 0.5);
   }
   .bestpd .swiper-slide :hover img {
-    transform: scale(1.2);
+    transform: translateY(-25%) scale(1.4);
+    background: rgba(255, 255, 255, 0);
+  }
+  .bestpd .swiper-slide :hover .bestpd-wrap {
+    background: rgba(255, 255, 255, 0);
+  }
+  .bestpd .swiper-slide :hover a {
+    background: rgba(255, 255, 255, 0);
   }
   .bestpd .swiper-slide :hover .bestpd-dt {
     display: none;
   }
-  .button {
-    display: none;
-    position: relative;
-    width: 200px;
-    height: 30px;
-    background-color: #f0f0f0;
-  }
-  .button .button.atc {
+  .bestpd .swiper-slide :hover .bestpd-hidden {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    flex-direction: column;
     position: absolute;
-    top: 0;
+    width: 100%;
+    margin-top: 7.5px;
+    background: #333;
+  }
+  .bestpd .swiper-slide :hover .bestpd-hidden:hover {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  .bestpd .swiper-slide :hover .bestpd-hidden p {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0 5px;
+    background: rgba(255, 255, 255, 0);
+  }
+  .bestpd .swiper-slide :hover .bestpd-hidden .bestpd-btn {
+    position: absolute;
+    width: 100%;
+    padding: 20px 0;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    transition: opacity 0.3 ease;
+    transition: opacity 0.3s ease;
   }
-  .button .button.atc:hover {
-    display: block;
-    opacity: 1;
+  .bestpd .swiper-slide :hover .bestpd-hidden .bestpd-btn .atc {
+    color: #fff;
+    background: rgba(255, 255, 255, 0);
   }
 }
 .newpd {
