@@ -79,7 +79,7 @@
   }
   .swiper-slide {
     @include flex;
-    height: 225px;
+    // height: 225px;
   }
   a {
     display: block;
@@ -96,11 +96,11 @@
   }
 }
 .bestpd-wrap {
-  @include flexSpaceBetween;
+  @include flex;
   flex-direction: column;
   text-align: center;
   width: 100%;
-  height: 225px;
+  
   // & :hover {
   //   img {
   //     transform: scale(120%);
@@ -109,12 +109,14 @@
 
 .bestpd-dt {
   .bestpd-name {
+    font-weight: 500;
+    color: $txtDefault;
     margin: 14px 0px;
   }
   .bestpd-info {
     @include flex;
-
     font-size: 12px;
+    font-weight: 400;
     color: $txtInfo;
   }
   .bestpd-info :nth-child(1)::after {
@@ -132,11 +134,63 @@
     height: 8px;
   }
 }
+.button {
+  display: none;
+}
+
+
+
 @media screen and (min-width: $breakpoint-xl) {
   .bestpd {
-  
+    
     .inner {
       padding: 20px 80px;
+    }
+  }
+  .bestpd-wrap {
+    height: auto;
+  }
+  .bestpd-name {
+    font-size: 18px;
+    
+    .bestpd-info {
+      font-size: 14px;
+      
+    }
+  }
+  
+  .bestpd .swiper-slide {
+    background: rgba(0,0,0,0);
+    & :hover {
+      background:rgba(211, 211, 211, 0.5) ;
+
+      img {
+        transform: scale(1.2);
+      }
+      .bestpd-dt {
+        display: none;
+      }
+      
+    }
+  }
+  .button {
+    display: none;
+    position: relative;
+    width: 200px;
+    height: 30px;
+    background-color: #f0f0f0;
+    .button.atc {
+
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: opacity 0.3 ease;
+
+      &:hover {
+        display: block;
+        opacity: 1;
+      }
     }
   }
 }

@@ -33,7 +33,6 @@ button {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #111;
 }
 
 fieldset,
@@ -217,7 +216,7 @@ body {
   width: 20px;
   height: 2px;
   border-radius: 2px;
-  background: #111;
+  background: #000;
   transition: all 0.3s;
 }
 
@@ -397,7 +396,6 @@ body {
   justify-content: center;
   align-content: center;
   flex-direction: row;
-  height: 225px;
 }
 .slide-bestpd a {
   display: block;
@@ -415,15 +413,17 @@ body {
 
 .bestpd-wrap {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
   flex-direction: column;
   text-align: center;
   width: 100%;
-  height: 225px;
 }
 
 .bestpd-dt .bestpd-name {
+  font-weight: 500;
+  color: #111;
   margin: 14px 0px;
 }
 .bestpd-dt .bestpd-info {
@@ -432,6 +432,7 @@ body {
   align-content: center;
   flex-direction: row;
   font-size: 12px;
+  font-weight: 400;
   color: #666;
 }
 .bestpd-dt .bestpd-info :nth-child(1)::after {
@@ -449,9 +450,52 @@ body {
   height: 8px;
 }
 
+.button {
+  display: none;
+}
+
 @media screen and (min-width: 1280px) {
   .bestpd .inner {
     padding: 20px 80px;
+  }
+  .bestpd-wrap {
+    height: auto;
+  }
+  .bestpd-name {
+    font-size: 18px;
+  }
+  .bestpd-name .bestpd-info {
+    font-size: 14px;
+  }
+  .bestpd .swiper-slide {
+    background: rgba(0, 0, 0, 0);
+  }
+  .bestpd .swiper-slide :hover {
+    background: rgba(211, 211, 211, 0.5);
+  }
+  .bestpd .swiper-slide :hover img {
+    transform: scale(1.2);
+  }
+  .bestpd .swiper-slide :hover .bestpd-dt {
+    display: none;
+  }
+  .button {
+    display: none;
+    position: relative;
+    width: 200px;
+    height: 30px;
+    background-color: #f0f0f0;
+  }
+  .button .button.atc {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3 ease;
+  }
+  .button .button.atc:hover {
+    display: block;
+    opacity: 1;
   }
 }
 .newpd {

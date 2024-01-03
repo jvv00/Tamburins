@@ -14,7 +14,14 @@ var swiper = new Swiper(".slide-bestpd", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
-  },
+    },
+    breakpoints: {
+        
+      1280: {
+        slidesPerView: 4,  //브라우저가 1280보다 클 때
+        spaceBetween: 40,
+      },
+    },
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -38,6 +45,13 @@ var swiper = new Swiper(".slide-gift", {
     el: ".swiper-pagination",
     clickable: true,
   },
+  breakpoints: {
+        
+    1280: {
+      slidesPerView: 4,  //브라우저가 1280보다 클 때
+      spaceBetween: 40,
+    },
+  },
 });
 
 var swiper = new Swiper(".slide-store", {
@@ -54,3 +68,4 @@ var swiper = new Swiper(".slide-store", {
     },
   },
 });
+
