@@ -56,6 +56,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <!-- auto scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -70,11 +72,12 @@
     <div class="wrap">
       <header id="header">
         <div class="inner header">
-          <div id="logo">
+          <h1 id="logo">
             <a href="#">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                
+                width="124"
+                height="16"
                 viewBox="0 0 124 16"
                 fill="none"
               >
@@ -117,31 +120,7 @@
               </svg>
               <span class="blind">logo</span>
             </a>
-          </div>
-          <div id="#gnb-desktop">
-            <ul class="gnb-depth1">
-              <li class="gnb-list">
-                <ul class="depth2">
-                  <li></li>
-                </ul>
-              </li>
-              <li class="gnb-list">
-                <ul class="depth2">
-                  <li></li>
-                </ul>
-              </li>
-              <li class="gnb-list">
-                <ul class="depth2">
-                  <li></li>
-                </ul>
-              </li>
-              <li class="gnb-list">
-                <ul class="depth2">
-                  <li></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+          </h1>
           <div class="col_right">
             <!-- gnb -->
             <nav class="gnb-wrap">
@@ -193,7 +172,7 @@
             <div class="swiper-slide">
               <a href="#"
                 ><img src="./images/main/slide1.png" alt="slide1"
-              /><a href=""><p class="slide-info">Day of Sorceress</p></a></a>
+              /></a>
             </div>
             <div class="swiper-slide">
               <a href="#"
@@ -214,9 +193,6 @@
           </div>
           <div class="swiper-pagination"></div>
         </div>
-
-        <!-- Swiper JS -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
         <!-- Initialize Swiper -->
         <div class="bestpd">
@@ -303,10 +279,11 @@
             </div>
           </div>
 
-          <!-- Swiper JS -->
-          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+          
         </div>
         <div class="newpd">
+          <div class="inner newpd">
+
           <h2 class="subtit">NEW PRODUCT</h2>
 
           <div class="newpd-bnr">
@@ -315,9 +292,6 @@
             /></a>
             <div>The Egg Purfume</div>
           </div>
-
-          <!-- auto scroll -->
-          <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
 
           <div class="auto-scroll-wrap">
             <div
@@ -349,6 +323,7 @@
               </div>
             </div>
           </div>
+        </div>
         </div>
         <div class="gift">
           <div class="inner gift">
@@ -434,6 +409,7 @@
           </div>
         </div>
         <div class="store">
+          <div class="store inner">
           <h2 class="subtit store-tit">STORE</h2>
 
           <div class="swiper slide-store">
@@ -513,6 +489,7 @@
               </svg>
             </button>
           </div>
+        </div>
         </div>
       </main>
       <footer id="footer">

@@ -4,7 +4,7 @@
   font-size: 22px;
   padding: 16px ;
 }
-
+// main slide
 .slide {
   --swiper-theme-color: #ff0000;
   position: relative;
@@ -42,10 +42,27 @@
     
   }
 }
+@media screen and (min-width: $breakpoint-xl) {
+  .slide-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 100px;
+    padding-left: 16px;
+   }
+   
+    img {
+      // min-width: 430px;
+      height: auto;
+  
+      
+    }
+}
+// best product
 .bestpd {
   
   .inner {
-    padding: 0 16px;
+    padding: 20px 0;
     background: $primary;
   }
 }
@@ -115,7 +132,15 @@
     height: 8px;
   }
 }
-
+@media screen and (min-width: $breakpoint-xl) {
+  .bestpd {
+  
+    .inner {
+      padding: 20px 80px;
+    }
+  }
+}
+// new product
 .newpd {
   @include flex;
   flex-direction: column;
@@ -125,6 +150,9 @@
   font-family: "Memento";
   font-size: 20px;
   background: $white;
+  .inner {
+    padding: 20px 0;
+  }
   .newpd-bnr {
     display: flex;
     flex-direction: column;
@@ -196,9 +224,18 @@
     }
   }
 }
+@media screen and (min-width: $breakpoint-xl) {
+  .newpd {
+  
+    .inner {
+      padding: 20px 80px;
+    }
+  }
+}
+// for gift
 .gift {
   .inner {
-    padding: 0 16px;
+    padding: 20px 0;
     background: $primary;
   }
 }
@@ -250,14 +287,25 @@
     color: $txtInfo;
   }
 }
-
+@media screen and (min-width: $breakpoint-xl) {
+  .gift {
+  
+    .inner {
+      padding: 20px 80px;
+    }
+  }
+}
+// store
 .store-tit {
   position: static;
   margin: 20px 0;
 }
 .store {
-  
-  background: $white;
+  .inner {
+    // padding: 0 16px;
+    background: $white;
+  }
+ 
   .swiper {
     margin: 0 auto;
     height: 60%;
@@ -317,6 +365,14 @@
       &:focus {
         outline: none;
       }
+    }
+  }
+}
+@media screen and (min-width: $breakpoint-xl) {
+  .store {
+  
+    .inner {
+      padding: 20px 80px;
     }
   }
 }
