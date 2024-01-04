@@ -160,55 +160,55 @@
   .bestpd .swiper-slide {
     & :hover {
       background:rgba(211, 211, 211, 0.5) ;
-
+      .bestpd-wrap, img, a, .bestpd-hidden, .bestpd-price, p, span {
+        background: rgba(255, 255, 255, 0);
+      }
       img {
         transform: translateY(-25%) scale(1.4);
-        background: rgba(255, 255, 255, 0);
-      }
-      .bestpd-wrap {
-        background: rgba(255, 255, 255, 0);
-      }
-      a{
-        background: rgba(255, 255, 255, 0);
       }
       .bestpd-dt {
         display: none;
       }
       .bestpd-hidden {
-        @include flex;
-        flex-direction: column;
-        position: absolute;
-        width: 100%;
-        margin-top: 7.5px;
-        background: $txtSub;
-        
-        &:hover {
-          opacity: 1;
-          transition: opacity 0.3s ease;
-        }
+        display: block;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+        .bestpd-price {
+          @include flex;
+          position: absolute;
+          width: 100%;
+          margin-top: 7.5px;
           p{
             font-size: 14px;
             font-weight: 400;
-            padding: 0 5px;
-            background: rgba(255, 255, 255, 0);
+            // padding: 0 5px;
           }
-
-          .bestpd-btn {
-            position: absolute;
-            width: 100%;
-            padding: 20px 0;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            transition: opacity 0.3s ease;
-            
-            
-            .atc {
-              color: $white;
-              background: rgba(255, 255, 255, 0);
-            }
+          span {
+            padding-right: 5px;
+            border-right: 1px solid $txtInfo;
+            margin-right: 5px;
           }
         }
+        .bestpd-btn {
+          position: absolute;
+          width: 100%;
+          padding: 20px 0;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          transition: opacity 0.3s ease;
+          background-color: $txtSub;
+          &:hover {
+            opacity: 1;
+          }
+          .atc {
+            color: $white;
+            background: rgba(255, 255, 255, 0);
+          }
+        }
+      }
+
+
         
       }
     }
@@ -296,15 +296,42 @@
       color: $txtDefault;
       font-size: 11px;
     }
+    
   }
 }
 @media screen and (min-width: $breakpoint-xl) {
   .newpd {
   
     .inner {
-      padding: 20px 80px;
+      padding: 20px 0;
+    }
+    .newpd-bnr {
+      display: none;
+    }
+    .subtit {
+      padding-left: 80px;
     }
   }
+  .newpd-desktop {
+    .bnr.img {
+      width: 100%;
+      height: 888px;
+      object-fit: cover;
+    }
+    .eggpurfume {
+      .body {
+        position: relative;
+
+      }
+      .lid {
+        position: absolute;
+        bottom: 66.6%;
+        left: 0;
+        width: 330px;
+      }
+    }
+  }
+  
 }
 // for gift
 .gift {

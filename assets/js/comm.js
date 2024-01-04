@@ -1,3 +1,14 @@
+window.addEventListener('scroll', function () {
+  var nav = document.querySelector("header");
+  var navDiv = document.querySelector('nav div');
+
+  if (window.scrollY >= 600) {
+      nav.classList.add('fixed-header');
+  } else {
+      nav.classList.remove('fixed-header');
+  }
+});
+
 var swiper = new Swiper(".slide", {
   slidesPerView: 1,
   spaceBetween: 0,

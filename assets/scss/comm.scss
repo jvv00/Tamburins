@@ -43,7 +43,9 @@ body {
     }
   }
 }
-
+.col_center {
+  display: none;
+}
 .col_right {
   position: absolute;
   top: 0;
@@ -115,8 +117,17 @@ body {
 @media screen and (min-width: $breakpoint-xl) {
   #header {
     max-width: none;
-    
+    height: $hdH-Desk;
   }
+  .fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    // filter: blur(3px);
+    
+}
   .inner.header {
     position: static;
     display: flex;
@@ -127,7 +138,6 @@ body {
   #logo {
     display: flex;
     justify-content: flex-start;
-    vertical-align: middle;
     align-items: center;
     align-content: center;
   
@@ -141,6 +151,45 @@ body {
       }
     }
   }
+  .col_center {
+    position: relative;
+    @include flex;
+    flex-wrap: wrap
+  }
+  .gnb-desktop.menu {
+    @include flex;
+    flex-wrap: wrap;
+}
+
+.gnb-desktop.menu > li {
+  position: relative;
+  @include flex;
+    margin: 0 60px; /* 각 메뉴 아이템 사이의 간격 조절 */
+}
+
+.gnb-desktop.menu a {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  padding: 7px 0;
+  color: $txtDefault; /* 링크 색상 설정 */
+}
+
+/* 서브메뉴 스타일링 */
+.gnb-desktop.menu.submenu {
+    display: none; /* 초기에는 서브메뉴 숨김 */
+    position: absolute;
+    top: 100%; /* 부모 메뉴의 하단에 배치 */
+    background-color: white; /* 서브메뉴 배경색 설정 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+}
+.gnb-desktop.menu.submenu a {
+  white-space:nowrap;
+}
+.gnb-desktop.menu li:hover .submenu  {
+    display: flex;
+    flex-direction: column;
+}
   .col_right {
     // position: absolute;
     // top: 0;

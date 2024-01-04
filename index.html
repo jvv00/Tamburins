@@ -56,6 +56,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
     <!-- auto scroll -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
@@ -70,7 +71,7 @@
   </div>
   <body>
     <div class="wrap">
-      <header id="header">
+      <header id="header" class="fixed-header">
         <div class="inner header">
           <h1 id="logo">
             <a href="#">
@@ -121,7 +122,47 @@
               <span class="blind">logo</span>
             </a>
           </h1>
+          <div class="col_center">
+            <nav class="gnb-desktop">
+              <ul class="gnb-desktop menu">
+                <li>
+                  <a href="#">PRODUCT</a>
+                    <ul class="gnb-desktop menu submenu">
+                      <li><a href="#">SKIN CARE</a></li>
+                      <li><a href="#">SKIN CARE</a></li>
+                      <li><a href="#">SKIN CARE</a></li>
+                      <li><a href="#">SKIN CARE</a></li>
+                    </ul>
+                </li>
+                <li>
+                  <a href="#">FOR GIFT</a>  
+                </li>
+                <li>
+                  <a href="#">STORE</a>
+                </li>
+                <li>
+                  <a href="#">SERVICE</a>
+                    <ul class="gnb-desktop menu submenu">
+                      <li><a href="#">SKIN CARE</a></li>
+                      <li><a href="#">SKIN CARE</a></li>
+                      <li><a href="#">SKIN CARE</a></li>
+                      <li><a href="#">SKIN CARE</a></li>
+                    </ul>
+                </li>
+                <li>
+                  <a href="#">SOCIAL</a>
+                    <ul class="gnb-desktop menu submenu">
+                      <li><a href="#">SKIN CARE</a></li>
+                      <li><a href="#">SKIN CARE</a></li>
+                      <li><a href="#">SKIN CARE</a></li>
+                      <li><a href="#">SKIN CARE</a></li>
+                    </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
           <div class="col_right">
+            
             <!-- gnb -->
             <nav class="gnb-wrap">
               <input
@@ -219,6 +260,7 @@
                     <div class="bestpd-hidden">
                     <div class="bestpd-price">
                       <p>50ml</p>
+                      <span></span>
                       <p>￦139,000</p>
                     </div>
                     
@@ -265,6 +307,7 @@
                     <div class="bestpd-hidden">
                       <div class="bestpd-price">
                         <p>50ml</p>
+                        <span></span>
                         <p>￦139,000</p>
                       </div>
                       
@@ -309,6 +352,7 @@
                     <div class="bestpd-hidden">
                       <div class="bestpd-price">
                         <p>50ml</p>
+                        <span></span>
                         <p>￦139,000</p>
                       </div>
                       
@@ -353,6 +397,7 @@
                     <div class="bestpd-hidden">
                       <div class="bestpd-price">
                         <p>50ml</p>
+                        <span></span>
                         <p>￦139,000</p>
                       </div>
                       
@@ -389,7 +434,26 @@
           <div class="inner newpd">
 
           <h2 class="subtit">NEW PRODUCT</h2>
-
+          <div class="newpd-desktop">
+            <div class="eggpurfume">
+              <img class="body" src="./images/main/tamburins_egg_purfume_body.png" alt="">
+              <img class="lid" src="./images/main/tamburins_egg_purfume_lid1.png" alt="">
+              
+              <img class="full" src="./images/main/tamburins_egg_purfume.png" alt="">
+            </div>
+            <div class="newpd-desktop bnr">
+              <img src="./images/main/tamburins_eggpurfume_bnr_dt.png" alt=""
+            />
+            </div>
+            <div class="newpd-desktop dt">
+              <p>
+                둥지 속에 포근히 감싸인 알의 따뜻하고 부드러운 곡선과 질감을 닮은 에그퍼퓸은
+알을 깨고 속을 경험하기 전에는 무엇이 들어 있을지 예상할 수 없는 궁금증을 자아냅니다.
+세상에 흩어진 모든 이야기에서 영감을 받은 감각적인 향이 단조로운 일상에 자유롭고 새로운 리듬을 부여합니다. 
+탬버린즈가 찾아낸 규정되지 않은 아름다움을 향수를 통해 경험해보세요.
+              </p>
+            </div>
+          </div>
           <div class="newpd-bnr">
             <a href="#"
               ><img src="./images/main/tamburins_eggpurfume_1.png" alt=""

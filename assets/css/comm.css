@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Memento";
   font-weight: 700;
@@ -167,6 +168,10 @@ body {
   height: 16px;
 }
 
+.col_center {
+  display: none;
+}
+
 .col_right {
   position: absolute;
   top: 0;
@@ -237,6 +242,14 @@ body {
 @media screen and (min-width: 1280px) {
   #header {
     max-width: none;
+    height: 100px;
+  }
+  .fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
   }
   .inner.header {
     position: static;
@@ -248,7 +261,6 @@ body {
   #logo {
     display: flex;
     justify-content: flex-start;
-    vertical-align: middle;
     align-items: center;
     align-content: center;
   }
@@ -258,6 +270,51 @@ body {
   }
   #logo a svg {
     height: 25px;
+  }
+  .col_center {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .gnb-desktop.menu {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .gnb-desktop.menu > li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    margin: 0 60px; /* 각 메뉴 아이템 사이의 간격 조절 */
+  }
+  .gnb-desktop.menu a {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    padding: 7px 0;
+    color: #111; /* 링크 색상 설정 */
+  }
+  /* 서브메뉴 스타일링 */
+  .gnb-desktop.menu.submenu {
+    display: none; /* 초기에는 서브메뉴 숨김 */
+    position: absolute;
+    top: 100%; /* 부모 메뉴의 하단에 배치 */
+    background-color: white; /* 서브메뉴 배경색 설정 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+  }
+  .gnb-desktop.menu.submenu a {
+    white-space: nowrap;
+  }
+  .gnb-desktop.menu li:hover .submenu {
+    display: flex;
+    flex-direction: column;
   }
   .col_right {
     height: 100px;
@@ -474,39 +531,37 @@ body {
   .bestpd .swiper-slide :hover {
     background: rgba(211, 211, 211, 0.5);
   }
+  .bestpd .swiper-slide :hover .bestpd-wrap, .bestpd .swiper-slide :hover img, .bestpd .swiper-slide :hover a, .bestpd .swiper-slide :hover .bestpd-hidden, .bestpd .swiper-slide :hover .bestpd-price, .bestpd .swiper-slide :hover p, .bestpd .swiper-slide :hover span {
+    background: rgba(255, 255, 255, 0);
+  }
   .bestpd .swiper-slide :hover img {
     transform: translateY(-25%) scale(1.4);
-    background: rgba(255, 255, 255, 0);
-  }
-  .bestpd .swiper-slide :hover .bestpd-wrap {
-    background: rgba(255, 255, 255, 0);
-  }
-  .bestpd .swiper-slide :hover a {
-    background: rgba(255, 255, 255, 0);
   }
   .bestpd .swiper-slide :hover .bestpd-dt {
     display: none;
   }
   .bestpd .swiper-slide :hover .bestpd-hidden {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  .bestpd .swiper-slide :hover .bestpd-hidden .bestpd-price {
     display: flex;
     justify-content: center;
     align-content: center;
     flex-direction: row;
-    flex-direction: column;
     position: absolute;
     width: 100%;
     margin-top: 7.5px;
-    background: #333;
   }
-  .bestpd .swiper-slide :hover .bestpd-hidden:hover {
-    opacity: 1;
-    transition: opacity 0.3s ease;
-  }
-  .bestpd .swiper-slide :hover .bestpd-hidden p {
+  .bestpd .swiper-slide :hover .bestpd-hidden .bestpd-price p {
     font-size: 14px;
     font-weight: 400;
-    padding: 0 5px;
-    background: rgba(255, 255, 255, 0);
+  }
+  .bestpd .swiper-slide :hover .bestpd-hidden .bestpd-price span {
+    padding-right: 5px;
+    border-right: 1px solid #666;
+    margin-right: 5px;
   }
   .bestpd .swiper-slide :hover .bestpd-hidden .bestpd-btn {
     position: absolute;
@@ -516,6 +571,10 @@ body {
     left: 50%;
     transform: translateX(-50%);
     transition: opacity 0.3s ease;
+    background-color: #333;
+  }
+  .bestpd .swiper-slide :hover .bestpd-hidden .bestpd-btn:hover {
+    opacity: 1;
   }
   .bestpd .swiper-slide :hover .bestpd-hidden .bestpd-btn .atc {
     color: #fff;
@@ -604,7 +663,27 @@ body {
 
 @media screen and (min-width: 1280px) {
   .newpd .inner {
-    padding: 20px 80px;
+    padding: 20px 0;
+  }
+  .newpd .newpd-bnr {
+    display: none;
+  }
+  .newpd .subtit {
+    padding-left: 80px;
+  }
+  .newpd-desktop .bnr.img {
+    width: 100%;
+    height: 888px;
+    object-fit: cover;
+  }
+  .newpd-desktop .eggpurfume .body {
+    position: relative;
+  }
+  .newpd-desktop .eggpurfume .lid {
+    position: absolute;
+    bottom: 66.6%;
+    left: 0;
+    width: 330px;
   }
 }
 .gift .inner {
