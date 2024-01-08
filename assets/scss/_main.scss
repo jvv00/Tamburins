@@ -38,7 +38,7 @@
     height: 690px;
     width: 100%;
     object-fit: cover;
-
+    object-position: 50% 0;
     
   }
 }
@@ -49,14 +49,15 @@
     left: 0;
     padding-bottom: 100px;
     padding-left: 16px;
-   }
-   
     img {
       // min-width: 430px;
       height: auto;
   
       
     }
+   }
+   
+    
 }
 // best product
 .bestpd {
@@ -164,7 +165,8 @@
         background: rgba(255, 255, 255, 0);
       }
       img {
-        transform: translateY(-25%) scale(1.4);
+        transform: translateY(-15%) scale(1.05) ;
+        transition: opacity 0.3s ease-in;
       }
       .bestpd-dt {
         display: none;
@@ -233,6 +235,9 @@
     align-items: center;
     justify-content: center;
     font-size: 28px;
+  }
+  .newpd-desktop {
+    display: none;
   }
 }
 
@@ -311,24 +316,68 @@
     .subtit {
       padding-left: 80px;
     }
-  }
-  .newpd-desktop {
-    .bnr.img {
-      width: 100%;
-      height: 888px;
-      object-fit: cover;
-    }
-    .eggpurfume {
-      .body {
+    .newpd-desktop{
+      display: flex;
+      flex-direction: column;
+      .name, .dt {
+        @include flex;
+      }
+      .name { 
         position: relative;
+        font-size: 60px;
+        padding: 15px;
+        
+        .title {
+          // AOS anchor 잡아서 하는걸로 하기
+          transform: translateY(20px);
+          transition: opacity 0.5s, transform 0.5s;
+        }
+       
+        
+        .first {
+          position: absolute;
+          top: -50%;
+          left: 30%;
+          opacity: 0;
+        }
+        .second {
+          position: absolute;
+          top: -30%;
+          left: 40%;
+          opacity: 0;
+        }
+        .third {
+          position: absolute;
+          top: -10%;
+          left: 50%;
+          opacity: 0;
+        }
+      }
+      .dt {
+        flex-direction: column;
+        font-size: 18px;
+        text-align: center;
+        p {
+          margin-bottom: 5px; 
+          
+        }
+      }
+    }
+  }
+  .eggpurfume {
+    @include flex;
+    flex-direction: column;
+    height: 200%;
+    .eggpurfume-element.background {
+      width: 100%;
+    }
+  }
+  
 
-      }
-      .lid {
-        position: absolute;
-        bottom: 66.6%;
-        left: 0;
-        width: 330px;
-      }
+  
+  .auto-scroll-wrap {
+    .splide__track {
+      // overflow: visible;
     }
   }
   
@@ -365,6 +414,7 @@
     height: 100%;
   }
 }
+
 .gift-wrap {
   @include flexSpaceBetween;
   flex-direction: column;
@@ -418,7 +468,7 @@
     justify-content: center;
     font-size: 22px;
     font-weight: bold;
-    color: #fff;
+    color: $txtDefault;
   }
   img {
     object-fit: contain;

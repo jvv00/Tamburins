@@ -126,6 +126,7 @@ body {
     width: 100%;
     background: rgba(255, 255, 255, 0.5);
     // filter: blur(3px);
+    backdrop-filter: blur(6px);
     
 }
   .inner.header {
@@ -264,6 +265,13 @@ body {
       font-size: 12px;
     }
   }
+}
+@media screen and (min-width: $breakpoint-xl) {
+  #footer{
+  .ft-wrap{
+    // display: flex;
+  }
+}
 }
 
 @import "main";

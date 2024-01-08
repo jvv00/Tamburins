@@ -242,7 +242,7 @@ body {
 @media screen and (min-width: 1280px) {
   #header {
     max-width: none;
-    height: 100px;
+    height: 80px;
   }
   .fixed-header {
     position: fixed;
@@ -250,12 +250,13 @@ body {
     left: 0;
     width: 100%;
     background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(6px);
   }
   .inner.header {
     position: static;
     display: flex;
     justify-content: space-between;
-    height: 100px;
+    height: 80px;
     padding: 35px 80px;
   }
   #logo {
@@ -317,10 +318,10 @@ body {
     flex-direction: column;
   }
   .col_right {
-    height: 100px;
+    height: 80px;
   }
   .gnb-wrap {
-    height: 100px;
+    height: 80px;
   }
 }
 #footer {
@@ -415,6 +416,7 @@ body {
   height: 690px;
   width: 100%;
   object-fit: cover;
+  object-position: 50% 0;
 }
 
 @media screen and (min-width: 1280px) {
@@ -425,7 +427,7 @@ body {
     padding-bottom: 100px;
     padding-left: 16px;
   }
-  img {
+  .slide-info img {
     height: auto;
   }
 }
@@ -535,7 +537,8 @@ body {
     background: rgba(255, 255, 255, 0);
   }
   .bestpd .swiper-slide :hover img {
-    transform: translateY(-25%) scale(1.4);
+    transform: translateY(-15%) scale(1.05);
+    transition: opacity 0.3s ease-in;
   }
   .bestpd .swiper-slide :hover .bestpd-dt {
     display: none;
@@ -600,6 +603,9 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 28px;
+}
+.newpd .newpd-desktop {
+  display: none;
 }
 
 .auto-scroll-wrap {
@@ -671,19 +677,61 @@ body {
   .newpd .subtit {
     padding-left: 80px;
   }
-  .newpd-desktop .bnr.img {
-    width: 100%;
-    height: 888px;
-    object-fit: cover;
+  .newpd .newpd-desktop {
+    display: flex;
+    flex-direction: column;
   }
-  .newpd-desktop .eggpurfume .body {
+  .newpd .newpd-desktop .name, .newpd .newpd-desktop .dt {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+  }
+  .newpd .newpd-desktop .name {
     position: relative;
+    font-size: 60px;
+    padding: 15px;
   }
-  .newpd-desktop .eggpurfume .lid {
+  .newpd .newpd-desktop .name .title {
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  .newpd .newpd-desktop .name .first {
     position: absolute;
-    bottom: 66.6%;
-    left: 0;
-    width: 330px;
+    top: -50%;
+    left: 30%;
+    opacity: 0;
+  }
+  .newpd .newpd-desktop .name .second {
+    position: absolute;
+    top: -30%;
+    left: 40%;
+    opacity: 0;
+  }
+  .newpd .newpd-desktop .name .third {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    opacity: 0;
+  }
+  .newpd .newpd-desktop .dt {
+    flex-direction: column;
+    font-size: 18px;
+    text-align: center;
+  }
+  .newpd .newpd-desktop .dt p {
+    margin-bottom: 5px;
+  }
+  .eggpurfume {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    flex-direction: column;
+    height: 200%;
+  }
+  .eggpurfume .eggpurfume-element.background {
+    width: 100%;
   }
 }
 .gift .inner {
@@ -766,7 +814,7 @@ body {
   justify-content: center;
   font-size: 22px;
   font-weight: bold;
-  color: #fff;
+  color: #111;
 }
 .store img {
   object-fit: contain;
