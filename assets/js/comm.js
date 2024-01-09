@@ -1,3 +1,5 @@
+AOS.init();
+
 window.addEventListener('scroll', function () {
   var nav = document.querySelector("header");
   var navDiv = document.querySelector('nav div');
@@ -8,48 +10,6 @@ window.addEventListener('scroll', function () {
       nav.classList.remove('fixed-header');
   }
 
-
-  const nameElements =document.querySelectorAll('.name');
-
- 
-  nameElements.forEach(function(element) {
-
-    const first = section.querySelector(".first"); 
-    const second = section.querySelector(".second"); 
-    const third = section.querySelector(".third"); 
-
-    if (element.offsetTop < window.scrollY + window.innerHeight) {
-
-        let nameScrolled =  window.scrollY + window.innerHeight
-        element.style.opacity = 1;
-        element.style.transform = 'translateY(0)';
-        element.style.transform = `translateY(${nameScrolled * 0.3}px)`;
-    }
-  });
-   
-
-  // const eggpurfume = this.document.querySelectorAll(".eggpurfume");
-
-  // eggpurfume.forEach(function(eggpurfume){
-    
-  //   let bounds = eggpurfume.getBoundingClientRect();
-  //   const background  = eggpurfume.querySelector(".background");
-  //   const body  = eggpurfume.querySelector(".body");
-  //   const lid  = eggpurfume.querySelector(".lid");
-  //   const full  = eggpurfume.querySelector(".full");
-
-  //   let scrolled = window.scrollY;
-
-  //   if(bounds.top < window.innerHeight && bounds.bottom >= 0){
-
-  //     let eggpurfumeScrolled = window.scrollY - eggpurfume.offsetTop;
-  //     background.style.transform = `translateY(${eggpurfumeScrolled * 0.8}px)`;
-  //     body.style.transform = `translateY(${eggpurfumeScrolled * -0.4}px)`;
-  //     lid.style.transform = `translateY(${eggpurfumeScrolled * 0.4}px)`;
-  //     // full.style.transform = `translateY(${eggpurfumeScrolled * -0.4}px)`;
-      
-  //   }
-  // })
 });
 
 
@@ -125,3 +85,65 @@ var swiper = new Swiper(".slide-store", {
   },
 });
 
+
+// "pen153" 요소를 가져옵니다.
+
+document.addEventListener("DOMContentLoaded", function () {
+  gsap.registerPlugin(ScrollTrigger);
+
+let scrollTrigger = gsap
+let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".eggpurfume",
+      start: "top top",
+      // end: "+=200",
+      end: "end end",
+      markers: false, // 개발 가이드선
+      scrub: 1.5,
+      // pin: true,
+    },
+    duration: 1, // 전체 애니메이션의 지속 시간을 4초로 설정
+  });
+
+  tl.fromTo(
+    ".eggpurfume-element.body",
+  { y: 400 },
+  { y: "-57%", ease: "power1.out", duration: 1.2 }
+  );
+    
+  tl.fromTo(
+    ".eggpurfume-element.lid",
+    { y: -600 },
+    { y: "-80%", ease: "power1.out" ,duration: 1.2 },
+    0
+     // 위에서 시작하는지 아래에서 시작하는지를 결정하는 옵션입니다.
+  );
+});
+  // .to(".bbody", { x: "-1891px", duration: 1.5 })
+  // .to(".bre", { x: "-102px", duration: 1.5 });
+
+// ScrollTrigger가 시작되면 start와 end 값을 동적으로 변경
+
+
+
+// gsap.utils.toArray("section").forEach((item) => {
+//   let color = item.getAttribute("data-bgcolor");
+
+//   ScrollTrigger.create({
+//     trigger: item,
+//     start: "top 50%",
+//     end: "bottom 5%",
+//     markers: false,
+
+//     onEnter: () =>
+//       gsap.to("body", {
+//         backgroundColor: color,
+//         duration: 0.4,
+//       }),
+//     onEnterBack: () =>
+//       gsap.to("body", {
+//         backgroundColor: color,
+//         duration: 0.4,
+//       }),
+//   });
+// });

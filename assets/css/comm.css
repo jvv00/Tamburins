@@ -681,38 +681,65 @@ body {
     display: flex;
     flex-direction: column;
   }
+  .newpd .newpd-desktop .eggpurfume {
+    position: relative;
+    width: 100%;
+    height: 200vh;
+  }
+  .newpd .newpd-desktop .body {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 380.25px;
+    object-fit: contain;
+  }
+  .newpd .newpd-desktop .lid {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    height: 332px;
+    object-fit: contain;
+  }
+  .newpd .newpd-desktop .full {
+    display: none;
+    height: 432px;
+    object-fit: contain;
+  }
+  .newpd .newpd-desktop .background {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+  }
   .newpd .newpd-desktop .name, .newpd .newpd-desktop .dt {
     display: flex;
     justify-content: center;
     align-content: center;
     flex-direction: row;
   }
-  .newpd .newpd-desktop .name {
-    position: relative;
+  .newpd .newpd-desktop .name .title {
     font-size: 60px;
     padding: 15px;
   }
-  .newpd .newpd-desktop .name .title {
-    transform: translateY(20px);
-    transition: opacity 0.5s, transform 0.5s;
+  .newpd .newpd-desktop .name .titlefirst {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: auto;
   }
-  .newpd .newpd-desktop .name .first {
-    position: absolute;
-    top: -50%;
-    left: 30%;
-    opacity: 0;
+  .newpd .newpd-desktop .name .titlesecond {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: auto;
   }
-  .newpd .newpd-desktop .name .second {
-    position: absolute;
-    top: -30%;
-    left: 40%;
-    opacity: 0;
-  }
-  .newpd .newpd-desktop .name .third {
-    position: absolute;
-    top: -10%;
-    left: 50%;
-    opacity: 0;
+  .newpd .newpd-desktop .name .titlethird {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: auto;
   }
   .newpd .newpd-desktop .dt {
     flex-direction: column;
@@ -751,6 +778,8 @@ body {
 }
 .slide-gift .swiper-wrapper {
   align-items: center;
+  padding: 0 16px;
+  width: 100%;
 }
 .slide-gift .swiper-slide {
   display: flex;
@@ -758,11 +787,13 @@ body {
   align-content: center;
   flex-direction: row;
   height: 225px;
+  flex-wrap: wrap;
 }
 .slide-gift a {
   height: 156px;
 }
 .slide-gift img {
+  display: block;
   object-fit: contain;
   width: 100%;
   height: 100%;
@@ -790,9 +821,81 @@ body {
   color: #666;
 }
 
+.gift-hidden {
+  display: none;
+}
+
 @media screen and (min-width: 1280px) {
   .gift .inner {
     padding: 20px 80px;
+  }
+  .gift-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    flex-direction: column;
+    text-align: center;
+    height: 390px;
+  }
+  .gift-btn {
+    opacity: 0;
+  }
+  .gift .swiper-slide :hover {
+    background: rgba(211, 211, 211, 0.5);
+  }
+  .gift .swiper-slide :hover .gift-wrap, .gift .swiper-slide :hover img, .gift .swiper-slide :hover a, .gift .swiper-slide :hover .gift-hidden, .gift .swiper-slide :hover .gift-price, .gift .swiper-slide :hover p, .gift .swiper-slide :hover span {
+    background: rgba(255, 255, 255, 0);
+  }
+  .gift .swiper-slide :hover img {
+    transform: translateY(-15%) scale(1.05);
+    transition: opacity 0.3s ease-in;
+  }
+  .gift .swiper-slide :hover .gift-dt {
+    display: none;
+  }
+  .gift .swiper-slide :hover .gift-hidden {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  .gift .swiper-slide :hover .gift-hidden .gift-price {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    width: 100%;
+    margin-top: 7.5px;
+  }
+  .gift .swiper-slide :hover .gift-hidden .gift-price p {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .gift .swiper-slide :hover .gift-hidden .gift-price span {
+    padding-right: 5px;
+    border-right: 1px solid #666;
+    margin-right: 5px;
+  }
+  .gift .swiper-slide :hover .gift-hidden .gift-btn {
+    position: absolute;
+    width: 100%;
+    padding: 20px 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease;
+    background-color: #333;
+  }
+  .gift .swiper-slide :hover .gift-hidden .gift-btn:hover {
+    opacity: 1;
+  }
+  .gift .swiper-slide :hover .gift-hidden .gift-btn .atc {
+    color: #fff;
+    background: rgba(255, 255, 255, 0);
   }
 }
 .store-tit {

@@ -56,7 +56,9 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js" integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- auto scroll -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
@@ -437,7 +439,7 @@
           <div class="newpd-desktop">
             <div class="eggpurfume">
               <img class="eggpurfume-element body" src="./images/main/tamburins_egg_purfume_body.png" alt="">
-              <img class="eggpurfume-element lid" src="./images/main/tamburins_egg_purfume_lid1.png" alt="">
+              <img class="eggpurfume-element lid" src="./images/main/tamburins_egg_purfume_lid2.png" alt="">
               
               <img class="eggpurfume-element full" src="./images/main/tamburins_egg_purfume.png" alt="">
               <img src="./images/main/tamburins_eggpurfume_bnr_dt.png" class="eggpurfume-element background" alt="">
@@ -447,21 +449,21 @@
             />
             </div> -->
             <div class="newpd-desktop name">
-              <p class="title first"> THE</p>
-              <p class="title second"> EGG</p>
-              <p class="title third"> PURFUME</p>
+              <p class="title first" id="first" data-aos="fade-up" data-aos-offset="0" data-aos-duration="500"> THE </p>
+              <p class="title second" id="second" data-aos="fade-up"  data-aos-anchor="#first" data-aos-offset="200" data-aos-duration="500"> EGG</p>
+              <p class="title third" data-aos="fade-up"  data-aos-anchor="#second" data-aos-offset="400" data-aos-duration="500"> PURFUME</p>
             </div>
             <div class="newpd-desktop dt">
-              <p>
+              <p class="detail first" id="dt1st" data-aos="fade-right" data-aos-offset="0" data-aos-duration="500">
                 둥지 속에 포근히 감싸인 알의 따뜻하고 부드러운 곡선과 질감을 닮은 에그퍼퓸은
               </p>
-              <p>
+              <p class="detail second" id="dt2nd" data-aos="fade-right" data-aos-anchor="#dt1st" data-aos-offset="100" data-aos-duration="500">
                 알을 깨고 속을 경험하기 전에는 무엇이 들어 있을지 예상할 수 없는 궁금증을 자아냅니다.
               </p>
-              <p>
-               세상에 흩어진 모든 이야기에서 영감을 받은 감각적인 향이 단조로운 일상에 자유롭고 새로운 리듬을 부여합니다.
+              <p class="detail third" id="dt3rd" data-aos="fade-right" data-aos-anchor="#dt2nd" data-aos-offset="200" data-aos-duration="500">
+                세상에 흩어진 모든 이야기에서 영감을 받은 감각적인 향이 단조로운 일상에 자유롭고 새로운 리듬을 부여합니다.
               </p>
-              <p>
+              <p class="detail fourth"  data-aos="fade-right" data-aos-anchor="#dt3rd" data-aos-offset="300" data-aos-duration="500">
                 탬버린즈가 찾아낸 규정되지 않은 아름다움을 향수를 통해 경험해보세요.
               </p>
 
@@ -520,6 +522,19 @@
                       <div class="gift-name">손 소독제 트리오</div>
                       <div class="gift-info">
                         손 소독제 세가지 향(000+FEY9+7)
+                      </div>
+                    </div>
+                    <div class="gift-hidden">
+                      <div class="gift-price">
+                        <p>50ml</p>
+                        <span></span>
+                        <p>￦139,000</p>
+                      </div>
+                      
+                      <div class="gift-btn">
+                        <button class="button atc">
+                          Add to Cart
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -736,5 +751,6 @@
         </ul>
       </footer>
     </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   </body>
 </html>
