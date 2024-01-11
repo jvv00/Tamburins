@@ -215,8 +215,11 @@ body {
   width: 100%;
   margin-top: 7.5rem;
 
-  .ft-wrap {
+  .ft-inner {
     display: block;
+    .ft-wrap {
+      display: block;
+    }
   }
   li {
     margin: 5px 0;
@@ -225,9 +228,11 @@ body {
     display: flex;
     flex-direction: column;
     font-family: "Memento";
+    
     .menu {
       margin: 16px 0;
     }
+    
   }
   .contact :first-child {
     color: $txtSub;
@@ -248,7 +253,7 @@ body {
   .ft-menu-tit::after {
     content: "";
     // display: block;
-    margin: 3px auto;
+    margin: 0 auto;
     border-bottom: 1px solid $txtSub;
     width: 100px;
   }
@@ -263,15 +268,107 @@ body {
 
     li {
       font-size: 12px;
+      text-decoration: none;
+      text-decoration-line: none;
     }
   }
 }
+#footer-desktop {
+  display: none;
+}
 @media screen and (min-width: $breakpoint-xl) {
-  #footer{
-  .ft-wrap{
-    // display: flex;
+  #footer {
+    display: none;
+    
+  }
+  #footer-desktop{
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    font-size: 10px;
+    width: 100%;
+    .ft-inner{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      flex-direction: row;
+      width: 100%;
+      margin: 80px 80px;    
+    }
+    .ft {
+      display: flex;
+      flex-direction: row;
+      font-family: "Memento";
+    }
+    .contact {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      p {
+        padding: ;
+      }
+    }
+    .contact :first-child {
+      color: $txtSub;
+      font-size: 18px;
+    } 
+    .contact :nth-child(2) {
+      color: $txtInfo;
+      font-size: 16px;
+    }
+    .contact :nth-child(3) {
+      color: $txtInfo;
+      font-size: 14px;
+    }
+    .ft.menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: 0 10px;
+      .menu-g{
+        flex-direction: column;
+        text-align: center;
+        margin-right: 75px;
+      }
+      .ft-menu-tit {
+        flex-direction: column;
+        font-size: 16px;
+      }
+      .ft-menu{
+        flex-direction: column;
+        font-size: 12px;
+        li {
+          padding: 7px;
+        }
+      }
+      .ft-menu-tit::after {
+        content: "";
+        // display: block;
+        margin: 0 auto;
+        border-bottom: 1px solid $txtSub;
+        width: 100px;
+        padding: 3px;
+      }
+    }
+    .terms{
+      justify-content: flex-start;
+    }
+    .copyright {
+      display: flex;
+      flex-direction: column;
+    }
+   .ft-wrap {
+      text-align: left;
+      p {
+        padding: 3px 3px;
+      }
+    }
+    
+  
+    
   }
 }
-}
+
 
 @import "main";

@@ -546,7 +546,7 @@
 }
 .store {
   .inner {
-    // padding: 0 16px;
+    padding: 0 16px;
     background: $white;
   }
  
@@ -565,7 +565,9 @@
   }
   img {
     object-fit: contain;
-    height: 200px;
+    // height: 200px;
+    width: 100%;
+    
   }
 
   .store-dt {
@@ -573,7 +575,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-    width: 82%;
+    width: 100%;
 
     .store-name {
       // position: absolute;
@@ -614,9 +616,14 @@
 }
 @media screen and (min-width: $breakpoint-xl) {
   .store {
-  
+    font-size: 18px;
     .inner {
       padding: 20px 80px;
+    }
+    .swiper-slide {
+      img {
+        width: 100%;
+      }
     }
   }
 }

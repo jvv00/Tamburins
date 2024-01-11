@@ -102,7 +102,7 @@ let tl = gsap.timeline({
       scrub: 1.5,
       // pin: true,
     },
-    duration: 1, // 전체 애니메이션의 지속 시간을 4초로 설정
+    duration: 1, // 전체 애니메이션의 지속 시간을 1초로 설정
   });
 
   tl.fromTo(
