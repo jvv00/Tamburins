@@ -249,7 +249,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.5);
+    background: #fff;
     backdrop-filter: blur(6px);
   }
   .inner.header {
@@ -287,6 +287,12 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
   }
+  .gnb-desktop {
+    font-family: "memento";
+  }
+  .gnb-desktop.menu {
+    /* 서브메뉴 스타일링 */
+  }
   .gnb-desktop.menu > li {
     position: relative;
     display: flex;
@@ -295,23 +301,60 @@ body {
     flex-direction: row;
     margin: 0 60px; /* 각 메뉴 아이템 사이의 간격 조절 */
   }
-  .gnb-desktop.menu a {
+  .gnb-desktop.menu > li .title {
     display: flex;
+    align-items: center;
     flex-direction: row;
     text-decoration: none;
-    padding: 7px 0;
+    height: 80px;
     color: #111; /* 링크 색상 설정 */
   }
-  /* 서브메뉴 스타일링 */
+  .gnb-desktop.menu > li .title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 80px;
+    height: 2px;
+    background-color: #666;
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  .gnb-desktop.menu > li .title:hover::after {
+    transform: scaleX(2);
+  }
   .gnb-desktop.menu.submenu {
     display: none; /* 초기에는 서브메뉴 숨김 */
     position: absolute;
     top: 100%; /* 부모 메뉴의 하단에 배치 */
     background-color: white; /* 서브메뉴 배경색 설정 */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+    padding: 10px 0;
   }
   .gnb-desktop.menu.submenu a {
+    position: relative;
     white-space: nowrap;
+    text-decoration: none;
+    color: #666;
+    padding: 16px;
+  }
+  .gnb-desktop.menu.submenu a:hover {
+    color: #333;
+  }
+  .gnb-desktop.menu.submenu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 100%;
+    height: 2px;
+    background-color: #666;
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  .gnb-desktop.menu.submenu a:hover::after {
+    transform: scaleX(1);
   }
   .gnb-desktop.menu li:hover .submenu {
     display: flex;
@@ -420,6 +463,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  #footer-desktop .contact p {
+    padding: 10px;
   }
   #footer-desktop .contact :first-child {
     color: #333;
