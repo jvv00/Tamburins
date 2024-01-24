@@ -4,7 +4,7 @@ window.addEventListener('scroll', function () {
   var nav = document.querySelector("header");
   var navDiv = document.querySelector('nav div');
 
-  if (window.scrollY >= 600) {
+  if (window.scrollY >= 1200) {
       nav.classList.add('fixed-header');
   } else {
       nav.classList.remove('fixed-header');
@@ -86,39 +86,59 @@ var swiper = new Swiper(".slide-store", {
 });
 
 
-// "pen153" 요소를 가져옵니다.
 
 document.addEventListener("DOMContentLoaded", function () {
   gsap.registerPlugin(ScrollTrigger);
 
-let scrollTrigger = gsap
-let tl = gsap.timeline({
+  // 첫 번째 ScrollTrigger
+  let tl1 = gsap.timeline({
     scrollTrigger: {
       trigger: ".eggpurfume",
       start: "top top",
-      // end: "+=200",
       end: "end end",
-      markers: false, // 개발 가이드선
+      markers: true,
       scrub: 1.5,
-      // pin: true,
     },
-    duration: 1, // 전체 애니메이션의 지속 시간을 1초로 설정
   });
 
-  tl.fromTo(
+  tl1.fromTo(
     ".eggpurfume-element.body",
-  { y: 400 },
-  { y: "-57%", ease: "power1.out", duration: 1.2 }
+    { y: 400 },
+    { y: "-57%", ease: "power1.inOut", duration: 1.2 }
   );
-    
-  tl.fromTo(
+
+  tl1.fromTo(
     ".eggpurfume-element.lid",
     { y: -600 },
-    { y: "-80%", ease: "power1.out" ,duration: 1.2 },
+    { y: "-80%", ease: "power1.inOut", duration: 1.2 },
     0
-     // 위에서 시작하는지 아래에서 시작하는지를 결정하는 옵션입니다.
+  );
+
+  // 두 번째 ScrollTrigger
+  let tl2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".eggpurfume-element.body",
+      start: "top center",
+      end: "bottom bottom",
+      markers: true,
+      scrub: 2,
+    },
+  });
+
+  tl2.fromTo(
+    ".eggpurfume-element.full",
+    { opacity: 1, x: "0%", y: "-65%", scale: 0.9 }, // 초기 상태
+    { opacity: 1, x: "75%", y: "335%", scale: 0.85, ease: "power3.inOut", duration: 1.2 }
   );
 });
+
+
+
+
+
+
+
+
   // .to(".bbody", { x: "-1891px", duration: 1.5 })
   // .to(".bre", { x: "-102px", duration: 1.5 });
 
