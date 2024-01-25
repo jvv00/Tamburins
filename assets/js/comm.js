@@ -127,8 +127,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   tl2.fromTo(
     ".eggpurfume-element.full",
-    { opacity: 1, x: "0%", y: "-65%", scale: 0.9 }, // 초기 상태
-    { opacity: 1, x: "75%", y: "335%", scale: 0.85, ease: "power3.inOut", duration: 1.2 }
+    { opacity: 0, x: "0%", y: "-65%", scale: 0.9 }, // 초기 상태
+    { opacity: 1, x: "25%", y: "325%", scale: 0.9,  }
   );
 });
 
