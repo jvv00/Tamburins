@@ -1,281 +1,248 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>main | Tamburins</title>
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="페이지 제목" />
-    <meta property="og:description" content="페이지 설명" />
-    <meta
-      property="og:image"
-      content="http://www.mysite.com/article/article1_featured_image.jpg"
-    />
-    <meta
-      property="og:url"
-      content="http://www.mysite.com/article/article1.html"
-    />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="페이지 제목" />
-    <meta name="twitter:description" content="페이지 설명" />
-    <meta
-      name="twitter:image"
-      content="http://www.mysite.com/article/article1.html"
-    />
-    <meta name="twitter:domain" content="사이트 명" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
-    />
-    <!--<link rel="shortcut icon" href="favicon.ico" />-->
-    <link rel="icon" href="./favicon.png" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- icons -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round"
-      rel="stylesheet"
-    />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>main | Tamburins</title>
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="페이지 제목" />
+        <meta property="og:description" content="페이지 설명" />
+        <meta property="og:image" content="http://www.mysite.com/article/article1_featured_image.jpg" />
+        <meta property="og:url" content="http://www.mysite.com/article/article1.html" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="페이지 제목" />
+        <meta name="twitter:description" content="페이지 설명" />
+        <meta name="twitter:image" content="http://www.mysite.com/article/article1.html" />
+        <meta name="twitter:domain" content="사이트 명" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+        <!--<link rel="shortcut icon" href="favicon.ico" />-->
+        <link rel="icon" href="./favicon.png" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+        <!-- icons -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round"
+            rel="stylesheet"
+        />
 
-    <!-- symbols -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@NaN,0,0,0"
-    />
+        <!-- symbols -->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@NaN,0,0,0"
+        />
 
-    <link rel="stylesheet" href="./assets/css/comm.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
-    />
+        <link rel="stylesheet" href="./assets/css/comm.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js" integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- auto scroll -->
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script defer src="./assets/js/comm.js"></script>
-  </head>
-  
-  <body>
-    <div id="u-skip">
-      <a href="#gnb">주메뉴 바로가기</a>
-      <a href="#main">본문 바로가기</a>
-    </div>
-    <div class="wrap">
-      <header id="header" class="fixed-header">
-        <div class="inner header">
-          <h1 id="logo">
-            <a href="#">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="124"
-                height="16"
-                viewBox="0 0 124 16"
-                fill="none"
-              >
-                <path
-                  d="M12.1778 3.77782H11.5556C11.3778 2.97782 10.9333 2.44449 10.3111 2.17782C9.86667 2.00005 9.24444 1.91116 8.26667 1.91116C7.91111 1.91116 7.73333 2.17782 7.73333 2.62227V12.8445C7.73333 13.4667 7.82222 14 7.91111 14.1778C8 14.4445 8.26667 14.8 8.8 15.2445L8.35555 15.6C7.64444 15.5112 6.84444 15.5112 6.04444 15.5112C5.33333 15.5112 4.53333 15.5112 3.73333 15.6L3.28889 15.2445C3.73333 14.8 4.08889 14.4445 4.17778 14.1778C4.26667 13.9112 4.35556 13.4667 4.35556 12.8445V2.97782C4.35556 2.62227 4.35556 2.44449 4.26667 2.26671C4.26667 2.00005 4 1.91116 3.73333 1.91116C1.95556 1.91116 0.888889 2.53338 0.533333 3.77782H0L0.711111 0.311157C2.48889 0.400046 4.17778 0.400046 5.95555 0.400046C7.82222 0.400046 9.68889 0.400046 11.4667 0.311157L12.1778 3.77782Z"
-                  fill="#111111"
-                />
-                <path
-                  d="M25.8667 15.3333L25.7778 15.6889C24.9778 15.6 24.1778 15.6 23.4667 15.6L20.7111 15.6889L20.5333 15.3333C20.8 14.8889 20.9778 14.5333 20.9778 14.3555C20.9778 14.0889 20.8 13.4666 20.5333 12.4889C20.3555 11.7777 20.0889 11.1555 19.8222 10.4444H15.4667C15.2889 11.1555 15.0222 11.7777 14.8444 12.4889C14.5778 13.4666 14.4 14.0889 14.4 14.3555C14.4 14.6222 14.5778 14.8889 14.8444 15.3333L14.6667 15.6889C13.9555 15.6 13.1555 15.6 12.4444 15.6C11.6444 15.6 10.8444 15.6 10.1333 15.6889L10.0444 15.3333C10.6667 14.8889 11.1111 14.5333 11.2889 14.2666C11.4667 14 11.7333 13.5555 12 12.9333L16.8889 0.133301H19.2889L24 12.9333C24.2667 13.6444 24.4444 14.0889 24.7111 14.3555C24.8889 14.5333 25.2444 14.8889 25.8667 15.3333ZM19.3778 8.84441L17.8667 3.86663L16.1778 8.84441H19.3778Z"
-                  fill="#111111"
-                />
-                <path
-                  d="M43.9111 15.3333L43.5556 15.6889C42.8444 15.6 42.1333 15.6 41.5111 15.6C40.8 15.6 40 15.6 39.2 15.6889L38.7556 15.3333C39.2 14.8889 39.4667 14.5333 39.5556 14.2666C39.6444 14 39.7333 13.5555 39.7333 12.9333L39.6444 4.04441L35.7333 15.6889H33.7778L29.9556 4.04441L29.8667 13.3777C29.8667 14.1777 30.0444 14.8889 30.4889 15.3333L30.1333 15.6889C29.6 15.6 29.0667 15.6 28.5333 15.6C28 15.6 27.4667 15.6 26.9333 15.6889L26.7556 15.3333C26.8444 15.1555 27.0222 14.8889 27.1111 14.6222C27.2889 14.2666 27.3778 13.7333 27.3778 12.9333L27.5556 2.5333C27.5556 1.7333 27.3778 1.02219 26.9333 0.488856L27.2 0.133301C28.9778 0.22219 30.3111 0.22219 31.2 0.22219L35.0222 11.4222L38.8444 0.22219H40C41.0667 0.22219 42.1333 0.22219 43.2889 0.133301L43.7333 0.488856C43.2889 0.933301 43.0222 1.28886 42.9333 1.46663C42.7556 1.64441 42.6667 2.08886 42.6667 2.62219C42.6667 3.15552 42.7556 6.5333 42.8444 12.9333C42.8444 13.6444 42.9333 14.0889 43.0222 14.2666C43.1111 14.5333 43.4667 14.8889 43.9111 15.3333Z"
-                  fill="#111111"
-                />
-                <path
-                  d="M57.5111 11.3333C57.5111 12.8444 56.9778 13.9111 55.8222 14.7111C54.8444 15.3333 53.6 15.6889 52 15.6889C51.6444 15.6889 51.0222 15.6889 50.3111 15.6889C49.6 15.6889 48.9778 15.6889 48.6222 15.6889C47.8222 15.6889 47.0222 15.6889 46.3111 15.6889L45.8667 15.3333C46.3111 14.8889 46.5778 14.5333 46.7556 14.2666C46.8444 14 46.9333 13.5555 46.9333 12.9333V2.88886C46.9333 2.26663 46.8444 1.7333 46.7556 1.55552C46.6667 1.28886 46.4 0.933301 45.8667 0.488856L46.2222 0.133301C46.8444 0.22219 48.3556 0.22219 50.6667 0.22219C52.5333 0.22219 53.9556 0.399967 54.8444 0.755523C56.2667 1.28886 56.9778 2.35552 56.9778 4.04441C56.9778 6.08886 55.9111 7.24441 53.6889 7.59997C56.2667 7.77775 57.5111 9.02219 57.5111 11.3333ZM53.6 4.31108C53.6 2.62219 52.7111 1.82219 51.0222 1.82219H50.0444V6.97775H51.2C51.9111 6.97775 52.5333 6.71108 52.9778 6.26663C53.3333 5.7333 53.6 5.11108 53.6 4.31108ZM54.0444 11.3333C54.0444 9.37775 53.0667 8.48886 51.0222 8.48886H49.9556V12.7555C49.9556 13.6444 50.2222 14.0889 50.8444 14.0889H51.3778C53.1556 14 54.0444 13.1111 54.0444 11.3333Z"
-                  fill="#111111"
-                />
-                <path
-                  d="M73.9555 0.399989C73.5111 0.844434 73.2444 1.19999 73.0667 1.46666C72.9778 1.73332 72.8889 2.17777 72.8889 2.88888V9.73332C72.8889 13.9111 70.6667 15.9555 66.3111 15.9555C63.9111 15.9555 62.2222 15.3333 61.3333 14C60.5333 12.9333 60.0889 11.1555 60.0889 8.75554V2.97777C60.0889 2.35554 60 1.82221 59.9111 1.55554C59.8222 1.28888 59.5556 0.933322 59.0222 0.488878L59.5555 0.133322C60.3555 0.222211 61.0667 0.222211 61.7778 0.222211C62.5778 0.222211 63.3778 0.222211 64.0889 0.133322L64.5333 0.488878C64.0889 0.933322 63.8222 1.28888 63.6444 1.55554C63.4667 1.82221 63.4667 2.26666 63.4667 2.97777V10.3555C63.4667 13.0222 64.4444 14.3555 66.4889 14.4444C68.7111 14.4444 69.8667 12.9333 69.8667 9.73332V2.88888C69.8667 2.26666 69.7778 1.73332 69.6889 1.46666C69.6 1.19999 69.3333 0.844434 68.8 0.399989L69.2444 0.0444336C69.8667 0.133322 70.4889 0.133322 71.2 0.133322C72 0.133322 72.8 0.133322 73.5111 0.0444336L73.9555 0.399989Z"
-                  fill="#111111"
-                />
-                <path
-                  d="M88.6222 15.4222L88.4445 15.6889C88.2667 15.6889 87.8222 15.6889 87.2 15.6C86.6667 15.6 86.3111 15.5111 85.9556 15.5111C85.4222 15.5111 84.8889 15.5111 84.5333 15.6C83.5556 13.2889 82.9333 11.9555 82.8445 11.6C81.8667 9.55554 81.0667 8.57777 80.4445 8.57777H80.2667V12.8444C80.2667 13.4667 80.3556 14 80.4445 14.1778C80.5333 14.4444 80.8 14.8 81.3333 15.2444L80.8889 15.6C80.1778 15.6 79.3778 15.6 78.5778 15.6C77.8667 15.6 77.0667 15.6 76.2667 15.6L75.8222 15.2444C76.2667 14.8 76.6222 14.4444 76.7111 14.1778C76.8 13.9111 76.8889 13.4667 76.8889 12.8444V2.88888C76.8889 2.17777 76.8 1.73332 76.7111 1.46666C76.6222 1.19999 76.3556 0.844434 75.8222 0.399989L76.2667 0.0444336C77.0667 0.133322 78.3111 0.133322 80 0.133322C82.3111 0.133322 83.8222 0.222211 84.6222 0.488878C86.2222 1.02221 87.0222 2.17777 87.0222 3.95554C87.0222 5.02221 86.6667 5.9111 86.0445 6.53332C85.4222 7.15554 84.5333 7.59999 83.4667 7.77777C83.9111 7.86666 84.6222 8.75554 85.5111 10.3555C86.1333 11.4222 86.6667 12.4889 87.2 13.5555C87.5556 14.1778 88 14.7111 88.6222 15.4222ZM83.6445 4.39999C83.6445 3.59999 83.3778 2.97777 82.8445 2.53332C82.3111 2.08888 81.6889 1.82221 80.8889 1.82221H80.1778V7.06666H81.0667C82.8445 7.06666 83.6445 6.17777 83.6445 4.39999Z"
-                  fill="#111111"
-                />
-                <path
-                  d="M95.2 15.3333L94.7556 15.6889C94.0445 15.6 93.2445 15.6 92.4445 15.6C91.7333 15.6 90.9333 15.6 90.1333 15.6889L89.6889 15.3333C90.1333 14.8889 90.4889 14.5333 90.5778 14.2666C90.6667 14 90.7556 13.5555 90.7556 12.9333V2.88886C90.7556 2.26663 90.6667 1.7333 90.5778 1.55552C90.4889 1.28886 90.2222 0.933301 89.6889 0.488856L90.0445 0.133301C90.8445 0.22219 91.5556 0.22219 92.2667 0.22219C93.0667 0.22219 93.8667 0.22219 94.5778 0.133301L95.0222 0.488856C94.5778 0.933301 94.2222 1.28886 94.1333 1.55552C94.2222 1.7333 94.2222 2.26663 94.2222 2.88886V12.9333C94.2222 13.5555 94.3111 14.0889 94.4 14.2666C94.4889 14.5333 94.7556 14.8889 95.2 15.3333Z"
-                  fill="#111111"
-                />
-                <path
-                  d="M111.644 0.399967C111.2 0.844412 110.844 1.19997 110.756 1.46663C110.667 1.7333 110.578 2.17775 110.578 2.79997V15.6889H107.911L100.8 4.31108V12.8444C100.8 13.4666 100.889 14 100.978 14.1777C101.067 14.4444 101.333 14.8 101.867 15.2444L101.511 15.6C100.978 15.5111 100.533 15.5111 100 15.5111C99.2889 15.5111 98.4889 15.5111 97.6889 15.6L97.2444 15.2444C97.6889 14.8 98.0444 14.4444 98.1333 14.1777C98.2222 13.9111 98.3111 13.4666 98.3111 12.8444V2.88886C98.3111 2.26663 98.2222 1.7333 98.1333 1.55552C98.0444 1.28886 97.7778 0.933301 97.2444 0.488856L97.6889 0.133301C99.4667 0.22219 100.356 0.311079 100.444 0.311079C100.8 0.311079 101.156 0.311079 101.511 0.22219L108.089 10.8V2.88886C108.089 2.26663 108 1.7333 107.911 1.55552C107.822 1.28886 107.556 0.933301 107.022 0.488856L107.467 0.133301C108.089 0.22219 108.622 0.22219 109.244 0.22219C109.956 0.22219 110.578 0.22219 111.289 0.133301L111.644 0.399967Z"
-                  fill="#111111"
-                />
-                <path
-                  d="M123.733 11.5111C123.733 12.8444 123.111 14 121.956 14.8C120.889 15.5111 119.644 15.8667 118.222 15.8667C117.778 15.8667 116.533 15.6889 114.578 15.3333L113.511 12.7555L114.222 11.6889C114.756 12.5778 115.289 13.2 115.733 13.5555C116.356 14 117.067 14.2667 117.956 14.2667C118.667 14.2667 119.289 14.0889 119.733 13.6444C120.178 13.2889 120.444 12.6667 120.444 12.0444C120.444 11.5111 120 10.8 119.022 10.0889C118.133 9.46665 117.156 8.75554 116.267 8.04443C115.2 7.24443 114.489 6.62221 114.311 6.08888C114.044 5.55554 113.956 4.93332 113.956 4.3111C113.956 2.97777 114.489 1.82221 115.467 1.1111C116.356 0.399989 117.6 0.0444336 118.933 0.0444336C120.178 0.0444336 121.333 0.222211 122.4 0.666656L122.222 3.42221H121.6C121.511 2.97777 121.244 2.53332 120.8 2.17777C120.444 1.82221 120 1.64443 119.467 1.64443C118.844 1.64443 118.311 1.82221 117.867 2.17777C117.422 2.53332 117.156 3.06666 117.156 3.68888C117.156 4.3111 117.689 5.02221 118.844 5.9111C120.8 7.42221 121.867 8.22221 122.044 8.3111C123.2 9.28888 123.733 10.3555 123.733 11.5111Z"
-                  fill="#111111"
-                />
-              </svg>
-              <span class="blind">logo</span>
-            </a>
-          </h1>
-          <div class="col_center">
-            <nav class="gnb-desktop">
-              <ul class="gnb-desktop menu">
-                <li>
-                  <a class="gnb-desktop menu title" href="#">PRODUCT</a>
-                    <ul class="gnb-desktop menu submenu">
-                      <li><a href="#">SKIN CARE</a></li>
-                      <li><a href="#">SKIN CARE</a></li>
-                      <li><a href="#">SKIN CARE</a></li>
-                      <li><a href="#">SKIN CARE</a></li>
-                    </ul>
-                </li>
-                <li>
-                  <a class="gnb-desktop menu title" href="#">FOR GIFT</a>  
-                </li>
-                <li>
-                  <a class="gnb-desktop menu title" href="#">STORE</a>
-                </li>
-                <li>
-                  <a class="gnb-desktop menu title" href="#">SERVICE</a>
-                    <ul class="gnb-desktop menu submenu">
-                      <li><a href="#">SKIN CARE</a></li>
-                      <li><a href="#">SKIN CARE</a></li>
-                      <li><a href="#">SKIN CARE</a></li>
-                      <li><a href="#">SKIN CARE</a></li>
-                    </ul>
-                </li>
-                <li>
-                  <a class="gnb-desktop menu title" href="#">SOCIAL</a>
-                    <ul class="gnb-desktop menu submenu">
-                      <li><a href="#">SKIN CARE</a></li>
-                      <li><a href="#">SKIN CARE</a></li>
-                      <li><a href="#">SKIN CARE</a></li>
-                      <li><a href="#">SKIN CARE</a></li>
-                    </ul>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div class="col_right">
-            
-            <!-- gnb -->
-            <nav class="gnb-wrap">
-              <input
-                type="checkbox"
-                name="gnbNav"
-                id="gnbNav"
-                class="input-burger"
-              />
-              <label for="gnbNav" class="label-burger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="blind">전체 메뉴 보기</span>
-              </label>
-              <div id="gnb">
-                전체 메뉴
-                <ul class="gnb menu">
-                  <li class="gnb product">
-                    <a href="#">PRODUCT</a>
-                    <ul class="gnb submenu">
-                      <li><a href="#">SKIN CARE</a></li>
-                      <li><a href="#">SKIN CARE</a></li>
-                      <li><a href="#">SKIN CARE</a></li>
-                      <li><a href="#">SKIN CARE</a></li>
-                    </ul>
-                  </li>
-                  <li class="gnb gift"><a href="#">FOR GIFT</a></li>
-                  <li class="gnb store"><a href="#">STORE</a></li>
-                  <li class="gnb service"><a href="#">SERVICE</a></li>
-                  <li class="gnb social"><a href="#">SOCIAL</a></li>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+            integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"
+            integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <!-- auto scroll -->
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script defer src="./assets/js/comm.js"></script>
+    </head>
 
-                  <ul>
-                    <li>MY PAGE</li>
-                    <li>LOG IN</li>
-                  </ul>
-                </ul>
-              </div>
-            </nav>
-            <!-- util -->
-            <div class="util"></div>
-          </div>
+    <body>
+        <div id="u-skip">
+            <a href="#gnb">주메뉴 바로가기</a>
+            <a href="#main">본문 바로가기</a>
         </div>
-      </header>
-
-      <main id="main">
-        <div class="video-wrap">
-          <video id="customVideo" src="./images/main/pc_mainVid_30mb.mp4" autoplay controls></video>
-        </div>
-        
-        <div class="swiper slide">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a href="#"
-                ><img src="./images/main/slide1.png" alt="slide1"
-              /></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#"
-                ><img src="./images/main/slide1.png" alt="slide1"
-              />
-            <a href=""><p class="slide-info">Day of Sorceress</p></a></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#"
-                ><img src="./images/main/slide1.png" alt="slide1"
-              /></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#"
-                ><img src="./images/main/slide1.png" alt="slide1"
-              /></a>
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-        <!-- Initialize Swiper -->
-        <div class="bestpd">
-          <div class="inner bestpd">
-            <h2 class="subtit">BEST PRODUCT</h2>
-            <div class="swiper slide-bestpd">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="bestpd-wrap">
-                    <a href="#">
-                      <img
-                        src="./images/main/tamburins_chamo_purfume.png"
-                        alt="#"
-                      />
-                    </a>
-                    <div class="bestpd-dt">
-                      <div class="bestpd-name">퍼퓸 카모</div>
-                      <ul class="bestpd-info">
-                        <li>진득한 카모마일</li>
-                        <li>부드러운 나무결</li>
-                        <li>머스크</li>
-                      </ul>
+        <div class="wrap">
+            <header id="header" class="fixed-header">
+                <div class="inner header">
+                    <h1 id="logo">
+                        <a href="#">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="124"
+                                height="16"
+                                viewBox="0 0 124 16"
+                                fill="none"
+                            >
+                                <path
+                                    d="M12.1778 3.77782H11.5556C11.3778 2.97782 10.9333 2.44449 10.3111 2.17782C9.86667 2.00005 9.24444 1.91116 8.26667 1.91116C7.91111 1.91116 7.73333 2.17782 7.73333 2.62227V12.8445C7.73333 13.4667 7.82222 14 7.91111 14.1778C8 14.4445 8.26667 14.8 8.8 15.2445L8.35555 15.6C7.64444 15.5112 6.84444 15.5112 6.04444 15.5112C5.33333 15.5112 4.53333 15.5112 3.73333 15.6L3.28889 15.2445C3.73333 14.8 4.08889 14.4445 4.17778 14.1778C4.26667 13.9112 4.35556 13.4667 4.35556 12.8445V2.97782C4.35556 2.62227 4.35556 2.44449 4.26667 2.26671C4.26667 2.00005 4 1.91116 3.73333 1.91116C1.95556 1.91116 0.888889 2.53338 0.533333 3.77782H0L0.711111 0.311157C2.48889 0.400046 4.17778 0.400046 5.95555 0.400046C7.82222 0.400046 9.68889 0.400046 11.4667 0.311157L12.1778 3.77782Z"
+                                    fill="#111111"
+                                />
+                                <path
+                                    d="M25.8667 15.3333L25.7778 15.6889C24.9778 15.6 24.1778 15.6 23.4667 15.6L20.7111 15.6889L20.5333 15.3333C20.8 14.8889 20.9778 14.5333 20.9778 14.3555C20.9778 14.0889 20.8 13.4666 20.5333 12.4889C20.3555 11.7777 20.0889 11.1555 19.8222 10.4444H15.4667C15.2889 11.1555 15.0222 11.7777 14.8444 12.4889C14.5778 13.4666 14.4 14.0889 14.4 14.3555C14.4 14.6222 14.5778 14.8889 14.8444 15.3333L14.6667 15.6889C13.9555 15.6 13.1555 15.6 12.4444 15.6C11.6444 15.6 10.8444 15.6 10.1333 15.6889L10.0444 15.3333C10.6667 14.8889 11.1111 14.5333 11.2889 14.2666C11.4667 14 11.7333 13.5555 12 12.9333L16.8889 0.133301H19.2889L24 12.9333C24.2667 13.6444 24.4444 14.0889 24.7111 14.3555C24.8889 14.5333 25.2444 14.8889 25.8667 15.3333ZM19.3778 8.84441L17.8667 3.86663L16.1778 8.84441H19.3778Z"
+                                    fill="#111111"
+                                />
+                                <path
+                                    d="M43.9111 15.3333L43.5556 15.6889C42.8444 15.6 42.1333 15.6 41.5111 15.6C40.8 15.6 40 15.6 39.2 15.6889L38.7556 15.3333C39.2 14.8889 39.4667 14.5333 39.5556 14.2666C39.6444 14 39.7333 13.5555 39.7333 12.9333L39.6444 4.04441L35.7333 15.6889H33.7778L29.9556 4.04441L29.8667 13.3777C29.8667 14.1777 30.0444 14.8889 30.4889 15.3333L30.1333 15.6889C29.6 15.6 29.0667 15.6 28.5333 15.6C28 15.6 27.4667 15.6 26.9333 15.6889L26.7556 15.3333C26.8444 15.1555 27.0222 14.8889 27.1111 14.6222C27.2889 14.2666 27.3778 13.7333 27.3778 12.9333L27.5556 2.5333C27.5556 1.7333 27.3778 1.02219 26.9333 0.488856L27.2 0.133301C28.9778 0.22219 30.3111 0.22219 31.2 0.22219L35.0222 11.4222L38.8444 0.22219H40C41.0667 0.22219 42.1333 0.22219 43.2889 0.133301L43.7333 0.488856C43.2889 0.933301 43.0222 1.28886 42.9333 1.46663C42.7556 1.64441 42.6667 2.08886 42.6667 2.62219C42.6667 3.15552 42.7556 6.5333 42.8444 12.9333C42.8444 13.6444 42.9333 14.0889 43.0222 14.2666C43.1111 14.5333 43.4667 14.8889 43.9111 15.3333Z"
+                                    fill="#111111"
+                                />
+                                <path
+                                    d="M57.5111 11.3333C57.5111 12.8444 56.9778 13.9111 55.8222 14.7111C54.8444 15.3333 53.6 15.6889 52 15.6889C51.6444 15.6889 51.0222 15.6889 50.3111 15.6889C49.6 15.6889 48.9778 15.6889 48.6222 15.6889C47.8222 15.6889 47.0222 15.6889 46.3111 15.6889L45.8667 15.3333C46.3111 14.8889 46.5778 14.5333 46.7556 14.2666C46.8444 14 46.9333 13.5555 46.9333 12.9333V2.88886C46.9333 2.26663 46.8444 1.7333 46.7556 1.55552C46.6667 1.28886 46.4 0.933301 45.8667 0.488856L46.2222 0.133301C46.8444 0.22219 48.3556 0.22219 50.6667 0.22219C52.5333 0.22219 53.9556 0.399967 54.8444 0.755523C56.2667 1.28886 56.9778 2.35552 56.9778 4.04441C56.9778 6.08886 55.9111 7.24441 53.6889 7.59997C56.2667 7.77775 57.5111 9.02219 57.5111 11.3333ZM53.6 4.31108C53.6 2.62219 52.7111 1.82219 51.0222 1.82219H50.0444V6.97775H51.2C51.9111 6.97775 52.5333 6.71108 52.9778 6.26663C53.3333 5.7333 53.6 5.11108 53.6 4.31108ZM54.0444 11.3333C54.0444 9.37775 53.0667 8.48886 51.0222 8.48886H49.9556V12.7555C49.9556 13.6444 50.2222 14.0889 50.8444 14.0889H51.3778C53.1556 14 54.0444 13.1111 54.0444 11.3333Z"
+                                    fill="#111111"
+                                />
+                                <path
+                                    d="M73.9555 0.399989C73.5111 0.844434 73.2444 1.19999 73.0667 1.46666C72.9778 1.73332 72.8889 2.17777 72.8889 2.88888V9.73332C72.8889 13.9111 70.6667 15.9555 66.3111 15.9555C63.9111 15.9555 62.2222 15.3333 61.3333 14C60.5333 12.9333 60.0889 11.1555 60.0889 8.75554V2.97777C60.0889 2.35554 60 1.82221 59.9111 1.55554C59.8222 1.28888 59.5556 0.933322 59.0222 0.488878L59.5555 0.133322C60.3555 0.222211 61.0667 0.222211 61.7778 0.222211C62.5778 0.222211 63.3778 0.222211 64.0889 0.133322L64.5333 0.488878C64.0889 0.933322 63.8222 1.28888 63.6444 1.55554C63.4667 1.82221 63.4667 2.26666 63.4667 2.97777V10.3555C63.4667 13.0222 64.4444 14.3555 66.4889 14.4444C68.7111 14.4444 69.8667 12.9333 69.8667 9.73332V2.88888C69.8667 2.26666 69.7778 1.73332 69.6889 1.46666C69.6 1.19999 69.3333 0.844434 68.8 0.399989L69.2444 0.0444336C69.8667 0.133322 70.4889 0.133322 71.2 0.133322C72 0.133322 72.8 0.133322 73.5111 0.0444336L73.9555 0.399989Z"
+                                    fill="#111111"
+                                />
+                                <path
+                                    d="M88.6222 15.4222L88.4445 15.6889C88.2667 15.6889 87.8222 15.6889 87.2 15.6C86.6667 15.6 86.3111 15.5111 85.9556 15.5111C85.4222 15.5111 84.8889 15.5111 84.5333 15.6C83.5556 13.2889 82.9333 11.9555 82.8445 11.6C81.8667 9.55554 81.0667 8.57777 80.4445 8.57777H80.2667V12.8444C80.2667 13.4667 80.3556 14 80.4445 14.1778C80.5333 14.4444 80.8 14.8 81.3333 15.2444L80.8889 15.6C80.1778 15.6 79.3778 15.6 78.5778 15.6C77.8667 15.6 77.0667 15.6 76.2667 15.6L75.8222 15.2444C76.2667 14.8 76.6222 14.4444 76.7111 14.1778C76.8 13.9111 76.8889 13.4667 76.8889 12.8444V2.88888C76.8889 2.17777 76.8 1.73332 76.7111 1.46666C76.6222 1.19999 76.3556 0.844434 75.8222 0.399989L76.2667 0.0444336C77.0667 0.133322 78.3111 0.133322 80 0.133322C82.3111 0.133322 83.8222 0.222211 84.6222 0.488878C86.2222 1.02221 87.0222 2.17777 87.0222 3.95554C87.0222 5.02221 86.6667 5.9111 86.0445 6.53332C85.4222 7.15554 84.5333 7.59999 83.4667 7.77777C83.9111 7.86666 84.6222 8.75554 85.5111 10.3555C86.1333 11.4222 86.6667 12.4889 87.2 13.5555C87.5556 14.1778 88 14.7111 88.6222 15.4222ZM83.6445 4.39999C83.6445 3.59999 83.3778 2.97777 82.8445 2.53332C82.3111 2.08888 81.6889 1.82221 80.8889 1.82221H80.1778V7.06666H81.0667C82.8445 7.06666 83.6445 6.17777 83.6445 4.39999Z"
+                                    fill="#111111"
+                                />
+                                <path
+                                    d="M95.2 15.3333L94.7556 15.6889C94.0445 15.6 93.2445 15.6 92.4445 15.6C91.7333 15.6 90.9333 15.6 90.1333 15.6889L89.6889 15.3333C90.1333 14.8889 90.4889 14.5333 90.5778 14.2666C90.6667 14 90.7556 13.5555 90.7556 12.9333V2.88886C90.7556 2.26663 90.6667 1.7333 90.5778 1.55552C90.4889 1.28886 90.2222 0.933301 89.6889 0.488856L90.0445 0.133301C90.8445 0.22219 91.5556 0.22219 92.2667 0.22219C93.0667 0.22219 93.8667 0.22219 94.5778 0.133301L95.0222 0.488856C94.5778 0.933301 94.2222 1.28886 94.1333 1.55552C94.2222 1.7333 94.2222 2.26663 94.2222 2.88886V12.9333C94.2222 13.5555 94.3111 14.0889 94.4 14.2666C94.4889 14.5333 94.7556 14.8889 95.2 15.3333Z"
+                                    fill="#111111"
+                                />
+                                <path
+                                    d="M111.644 0.399967C111.2 0.844412 110.844 1.19997 110.756 1.46663C110.667 1.7333 110.578 2.17775 110.578 2.79997V15.6889H107.911L100.8 4.31108V12.8444C100.8 13.4666 100.889 14 100.978 14.1777C101.067 14.4444 101.333 14.8 101.867 15.2444L101.511 15.6C100.978 15.5111 100.533 15.5111 100 15.5111C99.2889 15.5111 98.4889 15.5111 97.6889 15.6L97.2444 15.2444C97.6889 14.8 98.0444 14.4444 98.1333 14.1777C98.2222 13.9111 98.3111 13.4666 98.3111 12.8444V2.88886C98.3111 2.26663 98.2222 1.7333 98.1333 1.55552C98.0444 1.28886 97.7778 0.933301 97.2444 0.488856L97.6889 0.133301C99.4667 0.22219 100.356 0.311079 100.444 0.311079C100.8 0.311079 101.156 0.311079 101.511 0.22219L108.089 10.8V2.88886C108.089 2.26663 108 1.7333 107.911 1.55552C107.822 1.28886 107.556 0.933301 107.022 0.488856L107.467 0.133301C108.089 0.22219 108.622 0.22219 109.244 0.22219C109.956 0.22219 110.578 0.22219 111.289 0.133301L111.644 0.399967Z"
+                                    fill="#111111"
+                                />
+                                <path
+                                    d="M123.733 11.5111C123.733 12.8444 123.111 14 121.956 14.8C120.889 15.5111 119.644 15.8667 118.222 15.8667C117.778 15.8667 116.533 15.6889 114.578 15.3333L113.511 12.7555L114.222 11.6889C114.756 12.5778 115.289 13.2 115.733 13.5555C116.356 14 117.067 14.2667 117.956 14.2667C118.667 14.2667 119.289 14.0889 119.733 13.6444C120.178 13.2889 120.444 12.6667 120.444 12.0444C120.444 11.5111 120 10.8 119.022 10.0889C118.133 9.46665 117.156 8.75554 116.267 8.04443C115.2 7.24443 114.489 6.62221 114.311 6.08888C114.044 5.55554 113.956 4.93332 113.956 4.3111C113.956 2.97777 114.489 1.82221 115.467 1.1111C116.356 0.399989 117.6 0.0444336 118.933 0.0444336C120.178 0.0444336 121.333 0.222211 122.4 0.666656L122.222 3.42221H121.6C121.511 2.97777 121.244 2.53332 120.8 2.17777C120.444 1.82221 120 1.64443 119.467 1.64443C118.844 1.64443 118.311 1.82221 117.867 2.17777C117.422 2.53332 117.156 3.06666 117.156 3.68888C117.156 4.3111 117.689 5.02221 118.844 5.9111C120.8 7.42221 121.867 8.22221 122.044 8.3111C123.2 9.28888 123.733 10.3555 123.733 11.5111Z"
+                                    fill="#111111"
+                                />
+                            </svg>
+                            <span class="blind">logo</span>
+                        </a>
+                    </h1>
+                    <div class="col_center">
+                        <nav class="gnb-desktop">
+                            <ul class="gnb-desktop menu">
+                                <li>
+                                    <a class="gnb-desktop menu title" href="#">PRODUCT</a>
+                                    <ul class="gnb-desktop menu submenu">
+                                        <li><a href="#">SKIN CARE</a></li>
+                                        <li><a href="#">SKIN CARE</a></li>
+                                        <li><a href="#">SKIN CARE</a></li>
+                                        <li><a href="#">SKIN CARE</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="gnb-desktop menu title" href="#">FOR GIFT</a>
+                                </li>
+                                <li>
+                                    <a class="gnb-desktop menu title" href="#">STORE</a>
+                                </li>
+                                <li>
+                                    <a class="gnb-desktop menu title" href="#">SERVICE</a>
+                                    <ul class="gnb-desktop menu submenu">
+                                        <li><a href="#">SKIN CARE</a></li>
+                                        <li><a href="#">SKIN CARE</a></li>
+                                        <li><a href="#">SKIN CARE</a></li>
+                                        <li><a href="#">SKIN CARE</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="gnb-desktop menu title" href="#">SOCIAL</a>
+                                    <ul class="gnb-desktop menu submenu">
+                                        <li><a href="#">SKIN CARE</a></li>
+                                        <li><a href="#">SKIN CARE</a></li>
+                                        <li><a href="#">SKIN CARE</a></li>
+                                        <li><a href="#">SKIN CARE</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
-                    <div class="bestpd-hidden">
-                    <div class="bestpd-price">
-                      <p>50ml</p>
-                      <span></span>
-                      <p>￦139,000</p>
+                    <div class="col_right">
+                        <!-- gnb -->
+                        <nav class="gnb-wrap">
+                            <input type="checkbox" name="gnbNav" id="gnbNav" class="input-burger" />
+                            <label for="gnbNav" class="label-burger">
+                                <span class="bar"></span>
+                                <span class="bar"></span>
+                                <span class="bar"></span>
+                                <span class="blind">전체 메뉴 보기</span>
+                            </label>
+                            <div id="gnb">
+                                <ul class="gnb menu">
+                                    <li class="gnb product">
+                                        <a href="#">PRODUCT</a>
+                                        <ul class="gnb submenu">
+                                            <li><a href="#">SKIN CARE</a></li>
+                                            <li><a href="#">HAND & BODY</a></li>
+                                            <li><a href="#">PURFUME</a></li>
+                                            <li><a href="#">HOME</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="gnb gift"><a href="#">FOR GIFT</a></li>
+                                    <li class="gnb store"><a href="#">STORE</a></li>
+                                    <li class="gnb service"><a href="#">SERVICE</a></li>
+
+                                    <ul>
+                                        <li><a href="#">MY PAGE</a></li>
+                                        <li><a href="#">LOG IN</a></li>
+                                    </ul>
+                                </ul>
+                            </div>
+                        </nav>
+                        <!-- util -->
+                        <div class="util"></div>
                     </div>
-                    
-                    <div class="bestpd-btn">
-                      <button class="button atc">
-                        Add to Cart
-                      </button>
-                      <!-- <ul class="bestpd-radio">
+                </div>
+            </header>
+
+            <main id="main">
+                <div class="video-wrap">
+                    <video id="customVideo" src="./images/main/pc_mainVid_30mb.mp4" autoplay muted controls></video>
+                </div>
+
+                <div class="swiper slide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#"><img src="./images/main/tamburins_main_banner2-1.png" alt="slide1" /></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"
+                                ><img src="./images/main/tamburins_main_banner_6.jpg" alt="slide1" />
+                                <!-- <a href=""><p class="slide-info">Day of Sorceress</p></a> -->
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="./images/main/slide1.png" alt="slide1" /></a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <!-- Initialize Swiper -->
+                <div class="bestpd">
+                    <div class="inner bestpd">
+                        <h2 class="subtit">BEST PRODUCT</h2>
+                        <div class="swiper slide-bestpd">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="bestpd-wrap">
+                                        <a href="#">
+                                            <img src="./images/main/tamburins_chamo_purfume.png" alt="#" />
+                                        </a>
+                                        <div class="bestpd-dt">
+                                            <div class="bestpd-name">퍼퓸 카모</div>
+                                            <ul class="bestpd-info">
+                                                <li>진득한 카모마일</li>
+                                                <li>부드러운 나무결</li>
+                                                <li>머스크</li>
+                                            </ul>
+                                        </div>
+                                        <div class="bestpd-hidden">
+                                            <div class="bestpd-price">
+                                                <p>50ml</p>
+                                                <span></span>
+                                                <p>￦139,000</p>
+                                            </div>
+
+                                            <div class="bestpd-btn">
+                                                <button class="button atc">Add to Cart</button>
+                                                <!-- <ul class="bestpd-radio">
                         <li><label for="">
                           <span>15ml</span>
                           <input type="radio" id="html" name="ml" value="15ml">
@@ -287,42 +254,33 @@
                           </label>
                         </li>
                       </ul> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="bestpd-wrap">
+                                        <a href="#">
+                                            <img src="./images/main/tamburins_toilet_fragnance.png" alt="#" />
+                                        </a>
+                                        <div class="bestpd-dt">
+                                            <div class="bestpd-name">토일렛 프래그넌스 세이지마리</div>
+                                            <ul class="bestpd-info">
+                                                <li>클라리세이지</li>
+                                                <li>로즈마리</li>
+                                                <li>만다린</li>
+                                            </ul>
+                                        </div>
+                                        <div class="bestpd-hidden">
+                                            <div class="bestpd-price">
+                                                <p>50ml</p>
+                                                <span></span>
+                                                <p>￦139,000</p>
+                                            </div>
 
-
-                    </div>
-                  </div>
-                </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="bestpd-wrap">
-                    <a href="#">
-                      <img
-                        src="./images/main/tamburins_toilet_fragnance.png"
-                        alt="#"
-                      />
-                    </a>
-                    <div class="bestpd-dt">
-                      <div class="bestpd-name">
-                        토일렛 프래그넌스 세이지마리
-                      </div>
-                      <ul class="bestpd-info">
-                        <li>클라리세이지</li>
-                        <li>로즈마리</li>
-                        <li>만다린</li>
-                      </ul>
-                    </div>
-                    <div class="bestpd-hidden">
-                      <div class="bestpd-price">
-                        <p>50ml</p>
-                        <span></span>
-                        <p>￦139,000</p>
-                      </div>
-                      
-                      <div class="bestpd-btn">
-                        <button class="button atc">
-                          Add to Cart
-                        </button>
-                        <!-- <ul class="bestpd-radio">
+                                            <div class="bestpd-btn">
+                                                <button class="button atc">Add to Cart</button>
+                                                <!-- <ul class="bestpd-radio">
                           <li><label for="">
                             <span>15ml</span>
                             <input type="radio" id="html" name="ml" value="15ml">
@@ -334,40 +292,33 @@
                             </label>
                           </li>
                         </ul> -->
-  
-  
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="bestpd-wrap">
-                    <a href="#">
-                      <img
-                        src="./images/main/tamburins_chamo_purfumehand.png"
-                        alt="#"
-                      />
-                    </a>
-                    <div class="bestpd-dt">
-                      <div class="bestpd-name">퍼퓸 쉘 엑스 카모</div>
-                      <ul class="bestpd-info">
-                        <li>진득한 카모마일</li>
-                        <li>부드러운 나무결</li>
-                        <li>머스크</li>
-                      </ul>
-                    </div>
-                    <div class="bestpd-hidden">
-                      <div class="bestpd-price">
-                        <p>50ml</p>
-                        <span></span>
-                        <p>￦139,000</p>
-                      </div>
-                      
-                      <div class="bestpd-btn">
-                        <button class="button atc">
-                          Add to Cart
-                        </button>
-                        <!-- <ul class="bestpd-radio">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="bestpd-wrap">
+                                        <a href="#">
+                                            <img src="./images/main/tamburins_chamo_purfumehand.png" alt="#" />
+                                        </a>
+                                        <div class="bestpd-dt">
+                                            <div class="bestpd-name">퍼퓸 쉘 엑스 카모</div>
+                                            <ul class="bestpd-info">
+                                                <li>진득한 카모마일</li>
+                                                <li>부드러운 나무결</li>
+                                                <li>머스크</li>
+                                            </ul>
+                                        </div>
+                                        <div class="bestpd-hidden">
+                                            <div class="bestpd-price">
+                                                <p>50ml</p>
+                                                <span></span>
+                                                <p>￦139,000</p>
+                                            </div>
+
+                                            <div class="bestpd-btn">
+                                                <button class="button atc">Add to Cart</button>
+                                                <!-- <ul class="bestpd-radio">
                           <li><label for="">
                             <span>15ml</span>
                             <input type="radio" id="html" name="ml" value="15ml">
@@ -379,40 +330,33 @@
                             </label>
                           </li>
                         </ul> -->
-  
-  
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="bestpd-wrap">
-                    <a href="#">
-                      <img
-                        src="./images/main/tamburins_chamo_handwash.png"
-                        alt="#"
-                      />
-                    </a>
-                    <div class="bestpd-dt">
-                      <div class="bestpd-name">핸드워시 카모</div>
-                      <ul class="bestpd-info">
-                        <li>진득한 카모마일</li>
-                        <li>부드러운 나무결</li>
-                        <li>머스크</li>
-                      </ul>
-                    </div>
-                    <div class="bestpd-hidden">
-                      <div class="bestpd-price">
-                        <p>50ml</p>
-                        <span></span>
-                        <p>￦139,000</p>
-                      </div>
-                      
-                      <div class="bestpd-btn">
-                        <button class="button atc">
-                          Add to Cart
-                        </button>
-                        <!-- <ul class="bestpd-radio">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="bestpd-wrap">
+                                        <a href="#">
+                                            <img src="./images/main/tamburins_chamo_handwash.png" alt="#" />
+                                        </a>
+                                        <div class="bestpd-dt">
+                                            <div class="bestpd-name">핸드워시 카모</div>
+                                            <ul class="bestpd-info">
+                                                <li>진득한 카모마일</li>
+                                                <li>부드러운 나무결</li>
+                                                <li>머스크</li>
+                                            </ul>
+                                        </div>
+                                        <div class="bestpd-hidden">
+                                            <div class="bestpd-price">
+                                                <p>50ml</p>
+                                                <span></span>
+                                                <p>￦139,000</p>
+                                            </div>
+
+                                            <div class="bestpd-btn">
+                                                <button class="button atc">Add to Cart</button>
+                                                <!-- <ul class="bestpd-radio">
                           <li><label for="">
                             <span>15ml</span>
                             <input type="radio" id="html" name="ml" value="15ml">
@@ -424,416 +368,440 @@
                             </label>
                           </li>
                         </ul> -->
-  
-  
-                      </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
+                <div class="newpd">
+                    <div class="inner newpd">
+                        <h2 class="subtit">NEW PRODUCT</h2>
+                        <div class="newpd-desktop">
+                            <div class="eggpurfume">
+                                <img
+                                    class="eggpurfume-element body"
+                                    src="./images/main/tamburins_egg_purfume_body.png"
+                                    alt=""
+                                />
+                                <img
+                                    class="eggpurfume-element lid"
+                                    src="./images/main/tamburins_egg_purfume_lid2.png"
+                                    alt=""
+                                />
 
-          
-        </div>
-        <div class="newpd">
-          <div class="inner newpd">
-
-          <h2 class="subtit">NEW PRODUCT</h2>
-          <div class="newpd-desktop">
-            <div class="eggpurfume">
-              <img class="eggpurfume-element body" src="./images/main/tamburins_egg_purfume_body.png" alt="">
-              <img class="eggpurfume-element lid" src="./images/main/tamburins_egg_purfume_lid2.png" alt="">
-              
-              <img class="eggpurfume-element full" src="./images/main/tamburins_egg_purfume.png" alt="">
-              <img src="./images/main/tamburins_eggpurfume_bnr_dt.png" class="eggpurfume-element background" alt="">
-            </div>
-            <!-- <div class="newpd-desktop bnr">
+                                <img
+                                    class="eggpurfume-element full"
+                                    src="./images/main/tamburins_egg_purfume.png"
+                                    alt=""
+                                />
+                                <img
+                                    src="./images/main/tamburins_eggpurfume_bnr_dt.png"
+                                    class="eggpurfume-element background"
+                                    alt=""
+                                />
+                            </div>
+                            <!-- <div class="newpd-desktop bnr">
               <img src="./images/main/tamburins_eggpurfume_bnr_dt.png" alt=""
             />
             </div> -->
-            <div class="newpd-desktop name">
-              <p class="title first" id="first" data-aos="fade-up" data-aos-offset="0" data-aos-duration="500"> THE </p>
-              <p class="title second" id="second" data-aos="fade-up"  data-aos-anchor="#first" data-aos-offset="200" data-aos-duration="500"> EGG</p>
-              <p class="title third" data-aos="fade-up"  data-aos-anchor="#second" data-aos-offset="400" data-aos-duration="500"> PURFUME</p>
-            </div>
-            <div class="newpd-desktop dt">
-              <p class="detail first" id="dt1st" data-aos="fade-right" data-aos-offset="0" data-aos-duration="500">
-                둥지 속에 포근히 감싸인 알의 따뜻하고 부드러운 곡선과 질감을 닮은 에그퍼퓸은
-              </p>
-              <p class="detail second" id="dt2nd" data-aos="fade-right" data-aos-anchor="#dt1st" data-aos-offset="100" data-aos-duration="500">
-                알을 깨고 속을 경험하기 전에는 무엇이 들어 있을지 예상할 수 없는 궁금증을 자아냅니다.
-              </p>
-              <p class="detail third" id="dt3rd" data-aos="fade-right" data-aos-anchor="#dt2nd" data-aos-offset="200" data-aos-duration="500">
-                세상에 흩어진 모든 이야기에서 영감을 받은 감각적인 향이 단조로운 일상에 자유롭고 새로운 리듬을 부여합니다.
-              </p>
-              <p class="detail fourth"  data-aos="fade-right" data-aos-anchor="#dt3rd" data-aos-offset="300" data-aos-duration="500">
-                탬버린즈가 찾아낸 규정되지 않은 아름다움을 향수를 통해 경험해보세요.
-              </p>
-
-            </div>
-          </div>
-          <div class="newpd-bnr">
-            <a href="#"
-              ><img src="./images/main/tamburins_eggpurfume_1.png" alt=""
-            /></a>
-            <div>The Egg Purfume</div>
-          </div>
-
-          <div class="auto-scroll-wrap">
-            <div
-              id="splide-autoscroll"
-              class="splide"
-              aria-label="Beautiful Images"
-            >
-              <div class="splide__track">
-                <ul class="splide__list">
-                  <li class="splide__slide">
-                    <div class="newpd-img">
-                      <img
-                        src="images/main/tamburins_egg_purfume7.png"
-                        alt=""
-                      />
-                    </div>
-                    <div class="newpd-dt">
-                      <div class="newpd-name">에그 퍼퓸 홀리멘탈</div>
-                      <div class="newpd-info">
-                        <p>14ml</p>
-                        <div class="price">
-                          45,800
-                          <p>원</p>
+                            <div class="newpd-desktop name">
+                                <p
+                                    class="title first"
+                                    id="first"
+                                    data-aos="fade-up"
+                                    data-aos-offset="0"
+                                    data-aos-duration="500"
+                                >
+                                    THE
+                                </p>
+                                <p
+                                    class="title second"
+                                    id="second"
+                                    data-aos="fade-up"
+                                    data-aos-anchor="#first"
+                                    data-aos-offset="200"
+                                    data-aos-duration="500"
+                                >
+                                    EGG
+                                </p>
+                                <p
+                                    class="title third"
+                                    data-aos="fade-up"
+                                    data-aos-anchor="#second"
+                                    data-aos-offset="400"
+                                    data-aos-duration="500"
+                                >
+                                    PURFUME
+                                </p>
+                            </div>
+                            <div class="newpd-desktop dt">
+                                <p
+                                    class="detail first"
+                                    id="dt1st"
+                                    data-aos="fade-right"
+                                    data-aos-offset="0"
+                                    data-aos-duration="500"
+                                >
+                                    둥지 속에 포근히 감싸인 알의 따뜻하고 부드러운 곡선과 질감을 닮은 에그퍼퓸은
+                                </p>
+                                <p
+                                    class="detail second"
+                                    id="dt2nd"
+                                    data-aos="fade-right"
+                                    data-aos-anchor="#dt1st"
+                                    data-aos-offset="100"
+                                    data-aos-duration="500"
+                                >
+                                    알을 깨고 속을 경험하기 전에는 무엇이 들어 있을지 예상할 수 없는 궁금증을
+                                    자아냅니다.
+                                </p>
+                                <p
+                                    class="detail third"
+                                    id="dt3rd"
+                                    data-aos="fade-right"
+                                    data-aos-anchor="#dt2nd"
+                                    data-aos-offset="200"
+                                    data-aos-duration="500"
+                                >
+                                    세상에 흩어진 모든 이야기에서 영감을 받은 감각적인 향이 단조로운 일상에 자유롭고
+                                    새로운 리듬을 부여합니다.
+                                </p>
+                                <p
+                                    class="detail fourth"
+                                    data-aos="fade-right"
+                                    data-aos-anchor="#dt3rd"
+                                    data-aos-offset="300"
+                                    data-aos-duration="500"
+                                >
+                                    탬버린즈가 찾아낸 규정되지 않은 아름다움을 향수를 통해 경험해보세요.
+                                </p>
+                            </div>
                         </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-        <div class="gift">
-          <div class="inner gift">
-            <h2 class="subtit">FOR GIFT</h2>
-            <div class="swiper slide-gift">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="gift-wrap">
-                    <a href="#">
-                      <img src="./images/main/tamburins_gift_1.png" alt="#" />
-                    </a>
-                    <div class="gift-dt">
-                      <div class="gift-name">손 소독제 트리오</div>
-                      <div class="gift-info">
-                        손 소독제 세가지 향(000+FEY9+7)
-                      </div>
-                    </div>
-                    <div class="gift-hidden">
-                      <div class="gift-price">
-                        <p>50ml</p>
-                        <span></span>
-                        <p>￦139,000</p>
-                      </div>
-                      
-                      <div class="gift-btn">
-                        <button class="button atc">
-                          Add to Cart
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="gift-wrap">
-                    <a href="#">
-                      <img src="./images/main/tamburins_gift_2.png" alt="#" />
-                    </a>
-                    <div class="gift-dt">
-                      <div class="gift-name">퍼퓸드 핸드앤바디 듀오 세트</div>
-                      <div class="gift-info">워시&에멀전</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="gift-wrap">
-                    <a href="#">
-                      <img src="./images/main/tamburins_gift_3.png" alt="#" />
-                    </a>
-                    <div class="gift-dt">
-                      <div class="gift-name">바디듀오 BIGALICO</div>
-                      <div class="gift-info">샤워리바디워시&로션</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="gift-wrap">
-                    <a href="#">
-                      <img src="./images/main/tamburins_gift_4.png" alt="#" />
-                    </a>
-                    <div class="gift-dt">
-                      <div class="gift-name">퍼퓸핸드 미니 7 세트</div>
-                      <div class="gift-info">퍼퓸핸드 7가지 향</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="gift-wrap">
-                    <a href="#">
-                      <img src="./images/main/tamburins_gift_5.png" alt="#" />
-                    </a>
-                    <div class="gift-dt">
-                      <div class="gift-name">
-                        퍼퓸핸드 미니 듀오 세트 베스트
-                      </div>
-                      <div class="gift-info">퍼퓸핸드 베스트 향(FEY9+VEIN)</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="gift-wrap">
-                    <a href="#">
-                      <img src="./images/main/tamburins_gift_6.png" alt="#" />
-                    </a>
-                    <div class="gift-dt">
-                      <div class="gift-name">퍼퓸 비누&쉘</div>
-                      <div class="gift-info">
-                        특별한 퍼퓸 핸드케어 세트(CHAMO+VEIN)
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                        <div class="newpd-bnr">
+                            <a href="#"><img src="./images/main/tamburins_eggpurfume_1.png" alt="" /></a>
+                            <div>The Egg Purfume</div>
+                        </div>
 
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-        </div>
-        <div class="store">
-          <div class="store inner">
-          <h2 class="subtit store-tit">STORE</h2>
+                        <div class="auto-scroll-wrap">
+                            <div id="splide-autoscroll" class="splide" aria-label="Beautiful Images">
+                                <div class="splide__track">
+                                    <ul class="splide__list">
+                                        <li class="splide__slide">
+                                            <div class="newpd-img">
+                                                <img src="images/main/tamburins_egg_purfume7.png" alt="" />
+                                            </div>
+                                            <div class="newpd-dt">
+                                                <div class="newpd-name">에그 퍼퓸 홀리멘탈</div>
+                                                <div class="newpd-info">
+                                                    <p>14ml</p>
+                                                    <div class="price">
+                                                        45,800
+                                                        <p>원</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gift">
+                    <div class="inner gift">
+                        <h2 class="subtit">FOR GIFT</h2>
+                        <div class="swiper slide-gift">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="gift-wrap">
+                                        <a href="#">
+                                            <img src="./images/main/tamburins_gift_1.png" alt="#" />
+                                        </a>
+                                        <div class="gift-dt">
+                                            <div class="gift-name">손 소독제 트리오</div>
+                                            <div class="gift-info">손 소독제 세가지 향(000+FEY9+7)</div>
+                                        </div>
+                                        <div class="gift-hidden">
+                                            <div class="gift-price">
+                                                <p>50ml</p>
+                                                <span></span>
+                                                <p>￦139,000</p>
+                                            </div>
 
-          <div class="swiper slide-store">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href="#"
-                  ><img
-                    src="./images/main/tamburins_store_seongsu_1.png"
-                    alt=""
-                /></a>
-                <div class="store-dt">
-                  <div class="store-name">플래그십 스토어 성수</div>
-                  <div class="store-info">
-                    <div class="store-adr">서울 성동구 연무장5길 8</div>
-                    <div class="store-contact">+82 70 4266 6142</div>
-                    <div class="store-time">월-일 12:00pm-9:00pm</div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <a href="#"
-                  ><img
-                    src="./images/main/tamburins_store_seongsu_1.png"
-                    alt=""
-                /></a>
-                <div class="store-dt">
-                  <div class="store-name">플래그십 스토어 성수</div>
-                  <div class="store-info">
-                    <div class="store-adr">서울 성동구 연무장5길 8</div>
-                    <div class="store-contact">+82 70 4266 6142</div>
-                    <div class="store-time">월-일 12:00pm-9:00pm</div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <a href="#"
-                  ><img
-                    src="./images/main/tamburins_store_seongsu_1.png"
-                    alt=""
-                /></a>
-                <div class="store-dt">
-                  <div class="store-name">플래그십 스토어 성수</div>
-                  <div class="store-info">
-                    <div class="store-adr">서울 성동구 연무장5길 8</div>
-                    <div class="store-contact">+82 70 4266 6142</div>
-                    <div class="store-time">월-일 12:00pm-9:00pm</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="store-search-wrap">
-            <input
-              type="text"
-              placeholder="가까운 매장 찾기"
-              class="input-store-search"
-            />
-            <label for="input-store-search" class="label-store-search"></label>
+                                            <div class="gift-btn">
+                                                <button class="button atc">Add to Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="gift-wrap">
+                                        <a href="#">
+                                            <img src="./images/main/tamburins_gift_2.png" alt="#" />
+                                        </a>
+                                        <div class="gift-dt">
+                                            <div class="gift-name">퍼퓸드 핸드앤바디 듀오 세트</div>
+                                            <div class="gift-info">워시&에멀전</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="gift-wrap">
+                                        <a href="#">
+                                            <img src="./images/main/tamburins_gift_3.png" alt="#" />
+                                        </a>
+                                        <div class="gift-dt">
+                                            <div class="gift-name">바디듀오 BIGALICO</div>
+                                            <div class="gift-info">샤워리바디워시&로션</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="gift-wrap">
+                                        <a href="#">
+                                            <img src="./images/main/tamburins_gift_4.png" alt="#" />
+                                        </a>
+                                        <div class="gift-dt">
+                                            <div class="gift-name">퍼퓸핸드 미니 7 세트</div>
+                                            <div class="gift-info">퍼퓸핸드 7가지 향</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="gift-wrap">
+                                        <a href="#">
+                                            <img src="./images/main/tamburins_gift_5.png" alt="#" />
+                                        </a>
+                                        <div class="gift-dt">
+                                            <div class="gift-name">퍼퓸핸드 미니 듀오 세트 베스트</div>
+                                            <div class="gift-info">퍼퓸핸드 베스트 향(FEY9+VEIN)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="gift-wrap">
+                                        <a href="#">
+                                            <img src="./images/main/tamburins_gift_6.png" alt="#" />
+                                        </a>
+                                        <div class="gift-dt">
+                                            <div class="gift-name">퍼퓸 비누&쉘</div>
+                                            <div class="gift-info">특별한 퍼퓸 핸드케어 세트(CHAMO+VEIN)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-            <button class="store-search-submit">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="circum:search">
-                  <path
-                    id="Vector"
-                    d="M13.354 13.86C13.6606 14.1667 14.134 13.6934 13.8273 13.3934L11.3273 10.8867C12.2043 9.91638 12.689 8.6546 12.6873 7.34671C12.6873 4.42004 10.3073 2.04004 7.38064 2.04004C4.45397 2.04004 2.07397 4.42004 2.07397 7.34671C2.07397 10.2734 4.45397 12.6534 7.38064 12.6534C8.70064 12.6534 9.92064 12.1667 10.854 11.36L13.354 13.86ZM2.73997 7.34671C2.73997 4.78671 4.82664 2.70671 7.37997 2.70671C9.93997 2.70671 12.02 4.78671 12.02 7.34671C12.02 9.90671 9.93997 11.9867 7.37997 11.9867C4.82664 11.9867 2.73997 9.90671 2.73997 7.34671Z"
-                    fill="#666666"
-                    stroke="#666666"
-                    stroke-width="0.5"
-                  />
-                </g>
-              </svg>
-            </button>
-          </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="store">
+                    <div class="store inner">
+                        <h2 class="subtit store-tit">STORE</h2>
+
+                        <div class="swiper slide-store">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#"><img src="./images/main/tamburins_store_seongsu_1.png" alt="" /></a>
+                                    <div class="store-dt">
+                                        <div class="store-name">플래그십 스토어 성수</div>
+                                        <div class="store-info">
+                                            <div class="store-adr">서울 성동구 연무장5길 8</div>
+                                            <div class="store-contact">+82 70 4266 6142</div>
+                                            <div class="store-time">월-일 12:00pm-9:00pm</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#"><img src="./images/main/tamburins_store_seongsu_1.png" alt="" /></a>
+                                    <div class="store-dt">
+                                        <div class="store-name">플래그십 스토어 성수</div>
+                                        <div class="store-info">
+                                            <div class="store-adr">서울 성동구 연무장5길 8</div>
+                                            <div class="store-contact">+82 70 4266 6142</div>
+                                            <div class="store-time">월-일 12:00pm-9:00pm</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#"><img src="./images/main/tamburins_store_seongsu_1.png" alt="" /></a>
+                                    <div class="store-dt">
+                                        <div class="store-name">플래그십 스토어 성수</div>
+                                        <div class="store-info">
+                                            <div class="store-adr">서울 성동구 연무장5길 8</div>
+                                            <div class="store-contact">+82 70 4266 6142</div>
+                                            <div class="store-time">월-일 12:00pm-9:00pm</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="store-search-wrap">
+                            <input type="text" placeholder="가까운 매장 찾기" class="input-store-search" />
+                            <label for="input-store-search" class="label-store-search"></label>
+
+                            <button class="store-search-submit">
+                                <svg
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 16 16"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <g id="circum:search">
+                                        <path
+                                            id="Vector"
+                                            d="M13.354 13.86C13.6606 14.1667 14.134 13.6934 13.8273 13.3934L11.3273 10.8867C12.2043 9.91638 12.689 8.6546 12.6873 7.34671C12.6873 4.42004 10.3073 2.04004 7.38064 2.04004C4.45397 2.04004 2.07397 4.42004 2.07397 7.34671C2.07397 10.2734 4.45397 12.6534 7.38064 12.6534C8.70064 12.6534 9.92064 12.1667 10.854 11.36L13.354 13.86ZM2.73997 7.34671C2.73997 4.78671 4.82664 2.70671 7.37997 2.70671C9.93997 2.70671 12.02 4.78671 12.02 7.34671C12.02 9.90671 9.93997 11.9867 7.37997 11.9867C4.82664 11.9867 2.73997 9.90671 2.73997 7.34671Z"
+                                            fill="#666666"
+                                            stroke="#666666"
+                                            stroke-width="0.5"
+                                        />
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer id="footer">
+                <div class="ft-inner">
+                    <div class="ft-wrap">
+                        <div class="ft info1">
+                            <p>㈜아이아이컴바인드</p>
+                            <p>서울특별시 마포구 어울마당로5길 41</p>
+                            <p>대표자: 김한국</p>
+                        </div>
+                        <div class="ft mail">
+                            <p>대표번호: 1644-1246</p>
+                            <p>이메일: cs@tamburins.com</p>
+                        </div>
+                        <div class="ft info2">
+                            <p>사업자등록번호: 119-86-38589</p>
+                            <p>개인정보 보호 책임자: 정태호</p>
+                        </div>
+                        <div class="ft terms">
+                            <p>이용약관</p>
+                            <p>개인정보처리방침</p>
+                            <p>서비스 가입사실 확인</p>
+                        </div>
+                    </div>
+                    <div class="ft contact">
+                        <p>1644-1246</p>
+                        <p>09:30 ~ 17:00</p>
+                        <p>lunch 11:30 ~ 13:30</p>
+                    </div>
+                    <ul class="ft menu">
+                        <li>
+                            <h4 class="ft ft-menu-tit">INFO</h4>
+                            <ul class="ft ft-menu">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">적립금 현황</a></li>
+                                <li><a href="#">자주 묻는 질문</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4 class="ft ft-menu-tit">CONTACT</h4>
+                            <ul class="ft ft-menu">
+                                <li><a href="#">주문 배송 조회</a></li>
+                                <li><a href="#">고객서비스</a></li>
+                                <li><a href="#">1:1 문의하기</a></li>
+                                <li><a href="#">기업 구매 문의</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4 class="ft ft-menu-tit">FOR GIFT</h4>
+                            <ul class="ft ft-menu">
+                                <li><a href="#">온라인 서비스</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4 class="ft ft-menu-tit">SOCIAL</h4>
+                            <ul class="ft ft-menu">
+                                <li><a href="#">INSTAGRAM</a></li>
+                                <li><a href="#">KAKAOTALK</a></li>
+                                <li><a href="#">WEIBO</a></li>
+                                <li><a href="#">FACEBOOK</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="ft ft-g copyright">
+                        <p>고객님의 안전거래를 위해 하나은행과 채무지급보증계약을 체결해 보장해드리고 있습니다.</p>
+                        <p>ⓒ탬버린즈 대한민국</p>
+                    </div>
+                </div>
+            </footer>
+            <footer id="footer-desktop">
+                <div class="ft-inner">
+                    <div class="ft-wrap">
+                        <div class="ft info1">
+                            <p>㈜아이아이컴바인드</p>
+                            <p>서울특별시 마포구 어울마당로5길 41</p>
+                            <p>대표자: 김한국</p>
+                        </div>
+                        <div class="ft mail">
+                            <p>대표번호: 1644-1246</p>
+                            <p>이메일: cs@tamburins.com</p>
+                        </div>
+                        <div class="ft info2">
+                            <p>사업자등록번호: 119-86-38589</p>
+                            <p>개인정보 보호 책임자: 정태호</p>
+                        </div>
+                        <div class="ft terms">
+                            <p>이용약관</p>
+                            <p>개인정보처리방침</p>
+                            <p>서비스 가입사실 확인</p>
+                        </div>
+                        <div class="ft copyright">
+                            <p>고객님의 안전거래를 위해 하나은행과 채무지급보증계약을 체결해 보장해드리고 있습니다.</p>
+                            <p>ⓒ탬버린즈 대한민국</p>
+                        </div>
+                    </div>
+                    <ul class="ft menu">
+                        <li class="ft menu-g">
+                            <h4 class="ft ft-menu-tit">INFO</h4>
+                            <ul class="ft ft-menu">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">적립금 현황</a></li>
+                                <li><a href="#">자주 묻는 질문</a></li>
+                            </ul>
+                        </li>
+                        <li class="ft menu-g">
+                            <h4 class="ft ft-menu-tit">CONTACT</h4>
+                            <ul class="ft ft-menu">
+                                <li><a href="#">주문 배송 조회</a></li>
+                                <li><a href="#">고객서비스</a></li>
+                                <li><a href="#">1:1 문의하기</a></li>
+                                <li><a href="#">기업 구매 문의</a></li>
+                            </ul>
+                        </li>
+                        <li class="ft menu-g">
+                            <h4 class="ft ft-menu-tit">FOR GIFT</h4>
+                            <ul class="ft ft-menu">
+                                <li><a href="#">온라인 서비스</a></li>
+                            </ul>
+                        </li>
+                        <li class="ft menu-g">
+                            <h4 class="ft ft-menu-tit">SOCIAL</h4>
+                            <ul class="ft ft-menu">
+                                <li><a href="#">INSTAGRAM</a></li>
+                                <li><a href="#">KAKAOTALK</a></li>
+                                <li><a href="#">WEIBO</a></li>
+                                <li><a href="#">FACEBOOK</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="ft contact">
+                        <p>1644-1246</p>
+                        <p>09:30 ~ 17:00</p>
+                        <p>lunch 11:30 ~ 13:30</p>
+                    </div>
+                </div>
+            </footer>
         </div>
-        </div>
-      </main>
-      <footer id="footer">
-        <div class="ft-inner">
-          <div class="ft-wrap">
-          <div class="ft info1">
-            <p>㈜아이아이컴바인드</p>
-            <p>서울특별시 마포구 어울마당로5길 41</p>
-            <p>대표자: 김한국</p>
-          </div>
-          <div class="ft mail">
-            <p>대표번호: 1644-1246</p>
-            <p>이메일: cs@tamburins.com</p>
-          </div>
-          <div class="ft info2">
-            <p>사업자등록번호: 119-86-38589</p>
-            <p>개인정보 보호 책임자: 정태호</p>
-          </div>
-          <div class="ft terms">
-            <p>이용약관</p>
-            <p>개인정보처리방침</p>
-            <p>서비스 가입사실 확인</p>
-          </div>
-        </div>
-          <div class="ft contact">
-            <p>1644-1246</p>
-            <p>09:30 ~ 17:00</p>
-            <p>lunch 11:30 ~ 13:30</p>
-          </div>
-          <ul class="ft menu">
-            <li>
-              <h4 class="ft ft-menu-tit">INFO</h4>
-              <ul class="ft ft-menu">
-                <li><a href="#">공지사항</a></li>
-                <li><a href="#">적립금 현황</a></li>
-                <li><a href="#">자주 묻는 질문</a></li>
-              </ul>
-            </li>
-            <li>
-              <h4 class="ft ft-menu-tit">CONTACT</h4>
-              <ul class="ft ft-menu">
-                <li><a href="#">주문 배송 조회</a></li>
-                <li><a href="#">고객서비스</a></li>
-                <li><a href="#">1:1 문의하기</a></li>
-                <li><a href="#">기업 구매 문의</a></li>
-              </ul>
-            </li>
-            <li>
-              <h4 class="ft ft-menu-tit">FOR GIFT</h4>
-              <ul class="ft ft-menu">
-                <li><a href="#">온라인 서비스</a></li>
-              </ul>
-            </li>
-            <li>
-              <h4 class="ft ft-menu-tit">SOCIAL</h4>
-              <ul class="ft ft-menu">
-                <li><a href="#">INSTAGRAM</a></li>
-                <li><a href="#">KAKAOTALK</a></li>
-                <li><a href="#">WEIBO</a></li>
-                <li><a href="#">FACEBOOK</a></li>
-              </ul>
-            </li>
-          </ul>
-          <div class="ft ft-g copyright">
-          <p>
-            고객님의 안전거래를 위해 하나은행과 채무지급보증계약을 체결해
-            보장해드리고 있습니다.
-          </p>
-          <p>ⓒ탬버린즈 대한민국</p>
-        </div>
-        </div>
-      </footer>
-      <footer id="footer-desktop">
-        <div class="ft-inner">
-          <div class="ft-wrap">
-            <div class="ft info1">
-              <p>㈜아이아이컴바인드</p>
-              <p>서울특별시 마포구 어울마당로5길 41</p>
-            <p>대표자: 김한국</p>
-          </div>
-          <div class="ft mail">
-            <p>대표번호: 1644-1246</p>
-            <p>이메일: cs@tamburins.com</p>
-          </div>
-          <div class="ft info2">
-            <p>사업자등록번호: 119-86-38589</p>
-            <p>개인정보 보호 책임자: 정태호</p>
-          </div>
-          <div class="ft terms">
-            <p>이용약관</p>
-            <p>개인정보처리방침</p>
-            <p>서비스 가입사실 확인</p>
-          </div>
-          <div class="ft copyright">
-            <p>
-              고객님의 안전거래를 위해 하나은행과 채무지급보증계약을 체결해
-              보장해드리고 있습니다.
-            </p>
-            <p>ⓒ탬버린즈 대한민국</p>
-          </div>
-        </div>
-        <ul class="ft menu">
-          <li class="ft menu-g">
-            <h4 class="ft ft-menu-tit">INFO</h4>
-            <ul class="ft ft-menu">
-                <li><a href="#">공지사항</a></li>
-                <li><a href="#">적립금 현황</a></li>
-                <li><a href="#">자주 묻는 질문</a></li>
-              </ul>
-            </li>
-            <li class="ft menu-g">
-              <h4 class="ft ft-menu-tit">CONTACT</h4>
-              <ul class="ft ft-menu">
-                <li><a href="#">주문 배송 조회</a></li>
-                <li><a href="#">고객서비스</a></li>
-                <li><a href="#">1:1 문의하기</a></li>
-                <li><a href="#">기업 구매 문의</a></li>
-              </ul>
-            </li>
-            <li class="ft menu-g">
-              <h4 class="ft ft-menu-tit">FOR GIFT</h4>
-              <ul class="ft ft-menu">
-                <li><a href="#">온라인 서비스</a></li>
-              </ul>
-            </li>
-            <li class="ft menu-g">
-              <h4 class="ft ft-menu-tit">SOCIAL</h4>
-              <ul class="ft ft-menu">
-                <li><a href="#">INSTAGRAM</a></li>
-                <li><a href="#">KAKAOTALK</a></li>
-                <li><a href="#">WEIBO</a></li>
-                <li><a href="#">FACEBOOK</a></li>
-              </ul>
-            </li>
-          </ul>
-          <div class="ft contact">
-            <p>1644-1246</p>
-            <p>09:30 ~ 17:00</p>
-            <p>lunch 11:30 ~ 13:30</p>
-          </div>
-        </div>
-      </footer>
-    </div>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  </body>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    </body>
 </html>

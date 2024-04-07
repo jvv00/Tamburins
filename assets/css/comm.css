@@ -36,6 +36,11 @@ button {
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: #111;
+}
+
 fieldset,
 img {
   border: 0 none;
@@ -234,9 +239,44 @@ body {
   display: flex;
   justify-content: center;
   padding-top: 120px;
+  padding: 120px 40px 0;
   width: 100%;
   background: #fff;
   z-index: 1100;
+  font-family: "memento";
+  font-size: 18px;
+}
+#gnb .gnb.menu {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  width: 100%;
+}
+#gnb .gnb.menu > ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  padding-top: 150px;
+  max-height: 50svh;
+  height: 100%;
+}
+#gnb .gnb.menu > li a:hover {
+  color: #9e9e9e;
+}
+#gnb .gnb.menu .product.clicked .submenu {
+  max-height: 150px;
+  padding-top: 10px;
+}
+#gnb .gnb.menu .submenu {
+  display: flex;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+  font-size: 16px;
+  gap: 10px;
 }
 
 @media screen and (min-width: 1280px) {
@@ -378,10 +418,14 @@ body {
   margin-top: 7.5rem;
 }
 #footer .ft-inner {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 #footer .ft-inner .ft-wrap {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 #footer li {
   margin: 5px 0;
@@ -390,9 +434,14 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "Memento";
+  gap: 5px;
 }
-#footer .ft .menu {
-  margin: 16px 0;
+#footer .contact {
+  margin: 30px 0 0 0;
+}
+#footer .menu {
+  margin: 30px 0;
+  gap: 15px;
 }
 #footer .contact :first-child {
   color: #333;
@@ -566,25 +615,25 @@ body {
 @media screen and (min-width: 1280px) {
   .video-wrap {
     display: block;
-    margin: 0 auto;
-    width: 100%;
-    height: 100vh;
+    height: 100%;
     background: #f8f5f0;
+    /* 나머지 컨트롤 숨기기 */
+    /* 화면 클릭 시 재생 또는 일시정지 */
+    /* 마우스 호버 시 커서 모양 변경 */
   }
   .video-wrap video {
     width: 100%;
-    height: 100vh;
-  }
-  .video-wrap video::-webkit-media-controls-panel {
-    display: flex !important;
-    opacity: 1 !important;
+    height: 100%;
+    outline: none; /* 비디오 요소에 기본 포커스 표시 제거 */
   }
   .video-wrap video::-webkit-media-controls {
     display: none !important;
   }
-  .video-wrap video::-webkit-media-controls-volume-slider {
-    display: flex !important;
-    opacity: 1 !important;
+  .video-wrap video {
+    cursor: pointer;
+  }
+  .video-wrap .video-wrap:hover video {
+    cursor: pointer;
   }
   .swiper.slide {
     display: none;
@@ -692,7 +741,13 @@ body {
   .bestpd .swiper-slide :hover {
     background: rgba(211, 211, 211, 0.5);
   }
-  .bestpd .swiper-slide :hover .bestpd-wrap, .bestpd .swiper-slide :hover img, .bestpd .swiper-slide :hover a, .bestpd .swiper-slide :hover .bestpd-hidden, .bestpd .swiper-slide :hover .bestpd-price, .bestpd .swiper-slide :hover p, .bestpd .swiper-slide :hover span {
+  .bestpd .swiper-slide :hover .bestpd-wrap,
+  .bestpd .swiper-slide :hover img,
+  .bestpd .swiper-slide :hover a,
+  .bestpd .swiper-slide :hover .bestpd-hidden,
+  .bestpd .swiper-slide :hover .bestpd-price,
+  .bestpd .swiper-slide :hover p,
+  .bestpd .swiper-slide :hover span {
     background: rgba(255, 255, 255, 0);
   }
   .bestpd .swiper-slide :hover img {
@@ -815,11 +870,13 @@ body {
 }
 .splide__slide .newpd-info {
   display: flex;
+  flex-direction: column;
 }
 .splide__slide .newpd-info .price {
   display: flex;
-  padding-top: 10px;
+  justify-content: flex-end;
   font-size: 14px;
+  margin-right: 20px;
 }
 .splide__slide .newpd-info p {
   color: #111;
@@ -877,7 +934,8 @@ body {
     bottom: 0%;
     left: 0%;
   }
-  .newpd .newpd-desktop .name, .newpd .newpd-desktop .dt {
+  .newpd .newpd-desktop .name,
+  .newpd .newpd-desktop .dt {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -1009,7 +1067,13 @@ body {
   .gift .swiper-slide :hover {
     background: rgba(211, 211, 211, 0.5);
   }
-  .gift .swiper-slide :hover .gift-wrap, .gift .swiper-slide :hover img, .gift .swiper-slide :hover a, .gift .swiper-slide :hover .gift-hidden, .gift .swiper-slide :hover .gift-price, .gift .swiper-slide :hover p, .gift .swiper-slide :hover span {
+  .gift .swiper-slide :hover .gift-wrap,
+  .gift .swiper-slide :hover img,
+  .gift .swiper-slide :hover a,
+  .gift .swiper-slide :hover .gift-hidden,
+  .gift .swiper-slide :hover .gift-price,
+  .gift .swiper-slide :hover p,
+  .gift .swiper-slide :hover span {
     background: rgba(255, 255, 255, 0);
   }
   .gift .swiper-slide :hover img {
@@ -1108,8 +1172,7 @@ body {
 }
 .store .store-search-wrap {
   display: flex;
-  justify-content: flex-end;
-  margin-right: 9%;
+  justify-content: flex-start;
 }
 .store .store-search-wrap input {
   border-left-width: 0;
@@ -1132,5 +1195,9 @@ body {
   }
   .store .swiper-slide img {
     width: 100%;
+  }
+  .store .store-search-wrap {
+    justify-content: flex-end;
+    margin-right: 9%;
   }
 }
