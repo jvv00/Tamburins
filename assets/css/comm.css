@@ -330,16 +330,13 @@ body {
   .gnb-desktop {
     font-family: "memento";
   }
-  .gnb-desktop.menu {
-    /* 서브메뉴 스타일링 */
-  }
   .gnb-desktop.menu > li {
     position: relative;
     display: flex;
     justify-content: center;
     align-content: center;
     flex-direction: row;
-    margin: 0 60px; /* 각 메뉴 아이템 사이의 간격 조절 */
+    margin: 0 60px;
   }
   .gnb-desktop.menu > li .title {
     display: flex;
@@ -347,58 +344,37 @@ body {
     flex-direction: row;
     text-decoration: none;
     height: 80px;
-    color: #111; /* 링크 색상 설정 */
+    color: #111;
   }
-  .gnb-desktop.menu > li .title::after {
-    content: "";
+  .gnb-desktop.menu > li .title:hover {
+    color: #9e9e9e;
+  }
+  .gnb-desktop.menu .submenu {
     position: absolute;
-    left: 0;
-    bottom: 2px;
-    width: 80px;
-    height: 2px;
-    background-color: #666;
-    transform-origin: center;
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-  }
-  .gnb-desktop.menu > li .title:hover::after {
-    transform: scaleX(2);
-  }
-  .gnb-desktop.menu.submenu {
-    display: none; /* 초기에는 서브메뉴 숨김 */
-    position: absolute;
-    top: 100%; /* 부모 메뉴의 하단에 배치 */
-    background-color: white; /* 서브메뉴 배경색 설정 */
+    top: 100%;
     padding: 10px 0;
+    transition: all 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
   }
-  .gnb-desktop.menu.submenu a {
+  .gnb-desktop.menu .submenu a {
+    display: flex;
     position: relative;
     white-space: nowrap;
     text-decoration: none;
-    color: #666;
+    color: #111;
     padding: 16px;
-  }
-  .gnb-desktop.menu.submenu a:hover {
-    color: #333;
-  }
-  .gnb-desktop.menu.submenu a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 2px;
     width: 100%;
-    height: 2px;
-    background-color: #666;
-    transform-origin: center;
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
   }
-  .gnb-desktop.menu.submenu a:hover::after {
-    transform: scaleX(1);
+  .gnb-desktop.menu .submenu a:hover {
+    color: #9e9e9e;
   }
   .gnb-desktop.menu li:hover .submenu {
     display: flex;
     flex-direction: column;
+    max-height: 300px;
+    background: #fff;
+    opacity: 0.8;
   }
   .col_right {
     height: 80px;
@@ -489,6 +465,7 @@ body {
   }
   #footer-desktop {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     white-space: nowrap;
     font-size: 10px;
@@ -900,7 +877,7 @@ body {
   .newpd .newpd-desktop .eggpurfume {
     position: relative;
     width: 100%;
-    height: 250vh;
+    height: 150vh;
   }
   .newpd .newpd-desktop .body {
     position: absolute;
@@ -921,6 +898,7 @@ body {
     object-fit: contain;
   }
   .newpd .newpd-desktop .full {
+    display: none;
     position: absolute;
     top: 30%;
     left: 50%;
@@ -1094,7 +1072,6 @@ body {
     align-content: center;
     flex-direction: row;
     position: absolute;
-    bottom: 70px;
     left: 0;
     width: 100%;
     margin-top: 7.5px;
@@ -1199,5 +1176,9 @@ body {
   .store .store-search-wrap {
     justify-content: flex-end;
     margin-right: 9%;
+  }
+  .store .store-dt {
+    max-width: 1270px;
+    width: 100%;
   }
 }

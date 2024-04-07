@@ -108,22 +108,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
     tl1.fromTo('.eggpurfume-element.lid', { y: -600 }, { y: '-80%', ease: 'power1.inOut', duration: 1.2 }, 0)
 
-    // 두 번째 ScrollTrigger
-    let tl2 = gsap.timeline({
-        scrollTrigger: {
-            trigger: '.eggpurfume-element.body',
-            start: 'top center',
-            end: 'bottom bottom',
-            markers: true,
-            scrub: 2,
-        },
-    })
+    // // 두 번째 ScrollTrigger
+    // let tl2 = gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger: '.eggpurfume-element.body',
+    //         start: 'top center',
+    //         end: 'bottom bottom',
+    //         markers: true,
+    //         scrub: 2,
+    //     },
+    // })
 
-    tl2.fromTo(
-        '.eggpurfume-element.full',
-        { opacity: 0, x: '0%', y: '-65%', scale: 0.9 }, // 초기 상태
-        { opacity: 1, x: '25%', y: '325%', scale: 0.9 }
-    )
+    // tl2.fromTo(
+    //     '.eggpurfume-element.full',
+    //     { opacity: 0, x: '0%', y: '-65%', scale: 0.8 }, // 초기 상태
+    //     { opacity: 1, x: '55%', y: '425%', scale: 0.8 }
+    // )
 })
 
 document.addEventListener('DOMContentLoaded', function () {

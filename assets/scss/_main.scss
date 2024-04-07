@@ -348,7 +348,8 @@
             .eggpurfume {
                 position: relative;
                 width: 100%;
-                height: 250vh;
+                height: 150vh;
+                // 250vh
             }
             .body {
                 position: absolute;
@@ -370,7 +371,7 @@
                 object-fit: contain;
             }
             .full {
-                // display: none;
+                display: none;
                 position: absolute;
                 top: 30%;
                 left: 50%;
@@ -538,7 +539,7 @@
                 .gift-price {
                     @include flex;
                     position: absolute;
-                    bottom: 70px;
+                    // bottom: 70px;
                     left: 0;
                     width: 100%;
                     margin-top: 7.5px;
@@ -662,6 +663,10 @@
         .store-search-wrap {
             justify-content: flex-end;
             margin-right: 9%;
+        }
+        .store-dt {
+            max-width: 1270px;
+            width: 100%;
         }
     }
 }
